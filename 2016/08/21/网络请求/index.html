@@ -124,7 +124,7 @@ TCP/IP协议栈主要分为四层:应用层、传输层、网络层、数据链�
 <meta property="og:image" content="http://imgchr.com/images/6a6d58646f6af49d.png">
 <meta property="og:image" content="http://imgchr.com/images/IGMP2.png">
 <meta property="og:image" content="http://imgchr.com/images/igmp.png">
-<meta property="og:updated_time" content="2016-09-03T16:49:37.700Z">
+<meta property="og:updated_time" content="2016-09-04T12:55:20.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络请求">
 <meta name="twitter:description" content="TCP/IP协议分层
@@ -413,12 +413,13 @@ TCP/IP协议栈主要分为四层:应用层、传输层、网络层、数据链�
 <h6 id="3-数据查询接口"><a href="#3-数据查询接口" class="headerlink" title="3.数据查询接口"></a>3.数据查询接口</h6><p>(后补)</p>
 <h6 id="4-数据通信类接口"><a href="#4-数据通信类接口" class="headerlink" title="4.数据通信类接口"></a>4.数据通信类接口</h6><p>socket和HTTP可归结为数据通信接口，基于这两种接口用户可以开发网络通信应用程序，以及web页面交互程序。当然如果从编程开发角度看，无论是FTP、HTTP还是telnet，都是基于socket接口开发出来的应用层协议，是对socket接口的进一步封装和抽象，从而为用户提供更高一层的服务和接口。</p>
 <p><strong><font color="#FF7256">域名系统:</font></strong></p>
-<p>域名系统是一个分布的数据库，它提供将主机名（就是网址）转换成IP地址的服务。</p>
+<p>域名系统是一个分布的数据库，它提供将主机名（就是网址）转换成IP地址的服务。DNS （Domain Name System）服务是和HTTP协议一样位于应用层的协议。它提供域名到IP地址之间的解析服务。用户通常通过主机名或域名来访问对方的计算机，计算机则通过IP地址查询服务器。所以DNS就提供了域名查找IP 地址和从IP地址反查域名的服务。</p>
 <hr>
 <h3 id="一、TCP"><a href="#一、TCP" class="headerlink" title="一、TCP"></a><strong><font color="#FF7256">一、TCP</font></strong></h3><blockquote>
 <p><strong><font color="#FF7256">TCP（Transmission Control Protocol）: 传输控制协议</font></strong></p>
 </blockquote>
 <p> <strong><font color="#FF7256">TCP</font></strong>是面向连接的, 可靠的流协议,保证高可靠性(数据无丢失、数据无失序、数据无错误、数据无重复到达)的传输层协议。</p>
+<p> TCP位于传输层，提供可靠的字节流服务。字节流服务是指将大块数据分割成报文段（segment）为单位的数据包进行管理，为了保证准确性，TCP 协议采用了三次握手（three-way handshaking）策略。握手过程中使用了 TCP 的标志（flag）—— SYN（synchronize）、ACK（acknowledgement）和 FIN（finish）。</p>
 <h4 id="TCP报文头"><a href="#TCP报文头" class="headerlink" title="TCP报文头"></a><strong><font color="#FF7256">TCP报文头</font></strong></h4><p><img src="http://i4.buimg.com/567571/0d4c229145c13360.png" alt="|center|"></p>
 <h5 id="1-端口号"><a href="#1-端口号" class="headerlink" title="1.端口号"></a><strong><font color="#FF7256">1.端口号</font></strong></h5><blockquote>
 <p><strong><font color="#FF7256">源端口 (Source Port) :  长度为16位，2个字节。</font></strong><br><strong><font color="#FF7256">目的端口 (Destination Port) :  长度为16位，2个字节。</font></strong></p>
@@ -621,6 +622,8 @@ TCP/IP协议栈主要分为四层:应用层、传输层、网络层、数据链�
 <p><strong><font color="#FF7256">应用方向：</font></strong></p>
 <p>包总量较少的通信(DNS, SNMP等)；<br>视频,音频等多媒体通信(即时通信)；<br>限定于LAN等特定网络中的应用通信；<br>广播通信(广播, 多播)</p>
 <h3 id="三、IP协议"><a href="#三、IP协议" class="headerlink" title="三、IP协议"></a><strong><font color="#FF7256">三、IP协议</font></strong></h3><p>IP协议是TCP/IP协议的核心，所有的TCP，UDP，ICMP，IGCP的数据都以IP数据格式传输。要注意的是，IP不是可靠的协议，这是说，IP协议没有提供一种数据未传达以后的处理机制，这被认为是上层协议TCP或UDP要做的事情。所以这也就出现了TCP是一个可靠的协议，而UDP就没有那么可靠的区别。</p>
+<p>IP（Internet Protocol）网际协议位于网络层。其作用是把各种数据包传送给对方，需要满足各类条件，最重要的两个条件便是 IP 地址 和 MAC 地址。IP 地址可以和 MAC 地址进行配对，IP 地址可变换，但 MAC 地址基本不会更改。</p>
+<p>在网络上，通信的双方在同一局域网（LAN）内的情况是很少的，通常是经过多台计算机和网络设备中转才能连接到对方。而在进行中转时，会利用下一站中转设备的 MAC 地址来搜索下一个中转目标。这时，会采用 ARP （Address Resolution Protocol）协议。 ARP 是一种用以解析地址的协议，根据通信方的 IP 地址就可以反查出对应的 MAC 地址。</p>
 <p><strong><font color="#FF7256">特点：</font></strong> </p>
 <ol>
 <li><p>不可靠性（unreliable）是它不能保证 I P数据报能成功地到达目的地。 I P仅提供最好的传输服务。如果发生某种错误时，如某个路由器暂时用完了缓冲区， I P有一个简单的错误处理算法：丢弃该数据报，然后发送ICMP消息报给信源端。任何要求的可靠性必须由上层来提供（如TCP） 。</p>
