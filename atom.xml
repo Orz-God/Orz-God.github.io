@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-07T03:19:06.319Z</updated>
+  <updated>2016-09-13T17:17:41.379Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,146 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网络篇相关知识</title>
+    <link href="http://yoursite.com/2016/09/13/%E7%BD%91%E7%BB%9C%E7%AF%87%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
+    <id>http://yoursite.com/2016/09/13/网络篇相关知识/</id>
+    <published>2016-09-13T13:38:19.000Z</published>
+    <updated>2016-09-13T17:17:41.379Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>下列均转载自作者刘望舒 ，非常感谢！</p>
+</blockquote>
+<p><a href="http://www.jianshu.com/p/1ae1170b9a9a" target="_blank" rel="external">Android网络编程（一）HTTP协议原理</a></p>
+<p><a href="http://www.jianshu.com/p/af5ed498f2e2" target="_blank" rel="external">Android网络编程（二）HttpClient与HttpURLConnection</a></p>
+<p><a href="http://www.jianshu.com/p/797306fac9e8" target="_blank" rel="external">Android网络编程（三）Volley用法全解析</a></p>
+<p><a href="http://www.jianshu.com/p/e475f4479fb2" target="_blank" rel="external">Android网络编程（四）从源码解析Volley</a></p>
+<p><a href="http://www.jianshu.com/p/f7ca8877cf9b" target="_blank" rel="external">Android网络编程（五）OkHttp2.x用法全解析</a></p>
+<p><a href="http://www.jianshu.com/p/e15f90632692" target="_blank" rel="external">Android网络编程（六）OkHttp3用法全解析</a></p>
+<p><a href="http://www.jianshu.com/p/1ec39a05708f" target="_blank" rel="external">Android网络编程（七）源码解析OkHttp前篇（请求网络）</a></p>
+<p><a href="http://www.jianshu.com/p/35476796dd54#" target="_blank" rel="external">Android网络编程（八）源码解析OkHttp中篇（复用连接池）</a></p>
+<p><a href="http://www.jianshu.com/p/c3837e928864" target="_blank" rel="external">Android网络编程（九）Retrofit2前篇（基本使用）</a></p>
+<hr>
+<blockquote>
+<p>下列均转载自作者BlackSwift  ，非常感谢！</p>
+</blockquote>
+<p><a href="http://www.jianshu.com/p/aad5aacd79bf" target="_blank" rel="external">OkHttp3源码分析[综述]</a></p>
+<p><a href="http://www.jianshu.com/p/92a61357164b" target="_blank" rel="external">OkHttp3源码分析[复用连接池]</a></p>
+<p><a href="http://www.jianshu.com/p/9cebbbd0eeab" target="_blank" rel="external">OkHttp3源码分析[缓存策略]</a></p>
+<p><a href="http://www.jianshu.com/p/23b8aa490a6b" target="_blank" rel="external">OkHttp3源码分析[DiskLruCache]</a></p>
+<p><a href="http://www.jianshu.com/p/6637369d02e7" target="_blank" rel="external">OkHttp3源码分析[任务队列]</a></p>
+<hr>
+<blockquote>
+<p>下列均转载自简书作者烫烫烫烫烫烫烫烫烫烫烫烫烫烫烫  ，非常感谢！</p>
+</blockquote>
+<p><a href="http://www.jianshu.com/p/a44407f48321" target="_blank" rel="external">HttpClient-4.5总结（1）</a></p>
+<p><a href="http://www.jianshu.com/p/bd7bea8eb487" target="_blank" rel="external">HttpClient-4.5总结（2）</a></p>
+<p><a href="http://www.jianshu.com/p/f38a62efaa96" target="_blank" rel="external">HttpClient-4.5总结（3）</a></p>
+<p><a href="http://www.jianshu.com/p/92a5d41cefc4" target="_blank" rel="external">HttpClient-4.5总结（4）</a></p>
+<hr>
+<blockquote>
+<p>下列均转载自作者银狐公子  ，非常感谢！</p>
+</blockquote>
+<p><a href="http://blog.csdn.net/maoxiao1229/article/details/22886337" target="_blank" rel="external">基于android的Socket通信</a></p>
+<hr>
+<p><a href="http://www.cnblogs.com/devinzhang/archive/2012/01/08/2316453.html" target="_blank" rel="external">android之HttpURLConnection</a></p>
+<p><a href="http://www.jianshu.com/p/a79f1f49371b" target="_blank" rel="external">对HttpURLConnection的简单封装</a></p>
+<p><a href="http://www.jianshu.com/p/9d8784e81421" target="_blank" rel="external">Android HttpURLConnection及HttpClient对比</a></p>
+<p><a href="http://www.jianshu.com/p/960fa7509891" target="_blank" rel="external">Android网络之HttpUrlConnection和Socket关系解析</a></p>
+<p><a href="http://www.jianshu.com/p/8728e53a0d7e#" target="_blank" rel="external">Android网络之HttpUrlConnection和Socket关系图解</a></p>
+<p><a href="http://www.cnblogs.com/angeldevil/p/3729808.html" target="_blank" rel="external">快速Android开发系列网络篇之Android-Async-Http</a></p>
+<p><a href="http://www.jianshu.com/p/2910114bb78b" target="_blank" rel="external">Android网络开发之URLConnection和HttpURLConnection</a></p>
+<p><a href="http://blog.csdn.net/vpingchangxin/article/details/23375461" target="_blank" rel="external"> android http多请求异步封装对你绝对有用</a></p>
+<p><a href="http://www.jianshu.com/p/29b5d66079fa#" target="_blank" rel="external">Android个人总结之WebView的简单使用</a></p>
+<hr>
+<p><strong><font color="#FF7256">特别注意下列的网络请求：</font></strong></p>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/3141d4e46240#" target="_blank" rel="external">Android网络请求心路历程</a><br><a href="http://www.jianshu.com/p/bd1a6fb7a44d#" target="_blank" rel="external">HttpRequest</a><br><a href="http://a.codekk.com/detail/Android/grumoon/Volley%20%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90" target="_blank" rel="external">Volley 源码解析</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2015/0106/2275.html" target="_blank" rel="external">OkHttp使用教程</a><br><a href="http://duanyytop.github.io/2016/08/06/Retrofit%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">Retrofit用法详解</a><br><a href="http://www.jianshu.com/p/a56c61da55dd" target="_blank" rel="external">Retrofit2源码分析（动态代理）</a><br><a href="http://www.jianshu.com/p/fb8d21978e38" target="_blank" rel="external">Retrofit分析-经典设计模式案例</a><br><a href="http://www.jianshu.com/p/45cb536be2f4" target="_blank" rel="external">Retrofit分析-漂亮的解耦套路</a><br><a href="http://www.jianshu.com/p/9803a6efb672" target="_blank" rel="external">OkHttp3应用（HTTP DNS的实现）</a><br><a href="http://www.jianshu.com/p/d6fdfac5e97d#" target="_blank" rel="external">Socket通信简介</a><br><a href="http://www.jianshu.com/p/32d48ca7d0e0" target="_blank" rel="external">Android Webview总结</a><br><a href="http://www.jianshu.com/p/3fcf8ba18d7f" target="_blank" rel="external">史上最全WebView使用，附送Html5Activity一份</a><br><a href="http://www.jianshu.com/p/d2f5ae6b4927#" target="_blank" rel="external">WebView你真的熟悉吗？看了才知道</a><br><a href="http://www.jianshu.com/p/c86581cb343e#" target="_blank" rel="external">Cordova+Crosswalk打包WebApp</a><br><a href="http://www.jianshu.com/p/d3ef9c62b6c8" target="_blank" rel="external">还在用Android自带的WebView组件？太Out了！</a><strong><font color="#FF7256">（Crosswalk）</font></strong><br><a href="http://www.jianshu.com/p/1fb294ec7e3b" target="_blank" rel="external">RxJava + Retrofit完成网络请求</a><br><a href="http://gank.io/post/56e80c2c677659311bed9841" target="_blank" rel="external">RxJava 与 Retrofit 结合的最佳实践</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0105/3831.html" target="_blank" rel="external">OkHttp的使用简介及封装，实现更简洁的调用</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0504/4208.html" target="_blank" rel="external">Retrofit2 完全解析 探索与okhttp之间的关系</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0519/4279.html" target="_blank" rel="external">Retrofit–使用Retrofit时怎样去设置OKHttp</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0518/4270.html" target="_blank" rel="external">你真的会用Retrofit2吗?Retrofit2完全教程</a><br><a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2016/0816/6543.html" target="_blank" rel="external">教你一分钟实现动态模糊效果</a><br><a href="http://www.tuicool.com/articles/vmMjua2" target="_blank" rel="external">Volley+OkHttp3+Gson（Jackson）开源库的封装过程</a></p>
+</blockquote>
+<hr>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;下列均转载自作者刘望舒 ，非常感谢！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/1ae1170b9a9a&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Andro
+    
+    </summary>
+    
+      <category term="HttpClientHttp、URLConnection、OkHttp以及http" scheme="http://yoursite.com/categories/HttpClientHttp%E3%80%81URLConnection%E3%80%81OkHttp%E4%BB%A5%E5%8F%8Ahttp/"/>
+    
+    
+      <category term="http/https" scheme="http://yoursite.com/tags/http-https/"/>
+    
+      <category term="retrofit2" scheme="http://yoursite.com/tags/retrofit2/"/>
+    
+      <category term="OkHttp3" scheme="http://yoursite.com/tags/OkHttp3/"/>
+    
+      <category term="Socket" scheme="http://yoursite.com/tags/Socket/"/>
+    
+      <category term="HttpClientHttp" scheme="http://yoursite.com/tags/HttpClientHttp/"/>
+    
+      <category term="URLConnection" scheme="http://yoursite.com/tags/URLConnection/"/>
+    
+      <category term="Volley" scheme="http://yoursite.com/tags/Volley/"/>
+    
+      <category term="Crosswalk" scheme="http://yoursite.com/tags/Crosswalk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>自动化测试及抓包分析</title>
+    <link href="http://yoursite.com/2016/09/13/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%8F%8A%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2016/09/13/自动化测试及抓包分析/</id>
+    <published>2016-09-13T13:00:08.000Z</published>
+    <updated>2016-09-13T13:34:58.667Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p><strong><font color="#FF7256">以下均为配合网络请求转载的文章</font></strong></p>
+</blockquote>
+<p><a href="http://www.cnblogs.com/TankXiao/p/3316355.html" target="_blank" rel="external">如何学习自动化测试</a></p>
+<hr>
+<p><a href="http://www.cnblogs.com/TankXiao/p/5451469.html" target="_blank" rel="external">Android ADB 用法</a></p>
+<hr>
+<p><strong><font color="#FF7256">抓包工具使用：</font></strong></p>
+<p><a href="http://www.cnblogs.com/TankXiao/archive/2012/02/06/2337728.html" target="_blank" rel="external">Fiddler 教程</a></p>
+<p><a href="http://www.cnblogs.com/guodongdidi/p/4914408.html" target="_blank" rel="external">Fiddler+Jmeter+断言 详细教程</a></p>
+<p><a href="http://www.cnblogs.com/maifengqiang/p/3863168.html" target="_blank" rel="external">超级详细Tcpdump 的用法</a></p>
+<p><a href="http://www.cnblogs.com/zhuhongbao/p/3230046.html" target="_blank" rel="external">HttpWatch手把手图解教程</a></p>
+<p><a href="http://www.cnblogs.com/TingyunAPM/p/5445476.html" target="_blank" rel="external">Android 常用抓包工具介绍之Charles</a></p>
+<p><a href="http://www.cnblogs.com/TankXiao/archive/2012/10/10/2711777.html" target="_blank" rel="external">Wireshark基本介绍和学习TCP三次握手</a></p>
+<p><a href="http://www.cnblogs.com/tina-smile/p/5467447.html" target="_blank" rel="external">wireshark使用心得</a></p>
+<hr>
+<p><strong><font color="#FF7256">android自动化测试：</font></strong></p>
+<p><a href="http://www.cnblogs.com/TankXiao/p/4815134.html" target="_blank" rel="external">Android Monkey 压力测试介绍</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;#FF7256&quot;&gt;以下均为配合网络请求转载的文章&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/TankXiao/
+    
+    </summary>
+    
+      <category term="android测试" scheme="http://yoursite.com/categories/android%E6%B5%8B%E8%AF%95/"/>
+    
+    
+      <category term="Fiddler" scheme="http://yoursite.com/tags/Fiddler/"/>
+    
+      <category term="ADB" scheme="http://yoursite.com/tags/ADB/"/>
+    
+      <category term="Tcpdump" scheme="http://yoursite.com/tags/Tcpdump/"/>
+    
+      <category term="Jmeter" scheme="http://yoursite.com/tags/Jmeter/"/>
+    
+      <category term="Wireshark" scheme="http://yoursite.com/tags/Wireshark/"/>
+    
+      <category term="Charles" scheme="http://yoursite.com/tags/Charles/"/>
+    
+  </entry>
   
   <entry>
     <title>十批判书</title>
@@ -1070,7 +1210,7 @@
 <h6 id="分块传输编码："><a href="#分块传输编码：" class="headerlink" title="分块传输编码："></a><strong><font color="#FF7256">分块传输编码：</font></strong></h6><p>使用Content-Length字段的前提条件是，服务器发送回应之前，必须知道回应的数据长度。</p>
 <p>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模式”（stream）取代”缓存模式”（buffer）。</p>
 <p>因此，1.1版规定可以不使用Content-Length字段，而使用“分块传输编码”（chunked transfer encoding）。只要请求或回应的头信息有Transfer-Encoding字段，就表明回应将由数量未定的数据块组成。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div></pre></td></tr></table></figure></p>
-<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="undefined">25</span></div><div class="line">This is the data in the first chunk</div><div class="line"></div><div class="line">1C</div><div class="line">and this is the second one</div><div class="line"></div><div class="line">3</div><div class="line">con</div><div class="line"></div><div class="line">8</div><div class="line">sequence</div><div class="line"></div><div class="line">0</div></pre></td></tr></table></figure></p>
+<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="java"><span class="number">25</span></span></div><div class="line">This is the data in the first chunk</div><div class="line"></div><div class="line"><span class="number">1</span>C</div><div class="line">and <span class="keyword">this</span> is the second one</div><div class="line"></div><div class="line"><span class="number">3</span></div><div class="line">con</div><div class="line"></div><div class="line"><span class="number">8</span></div><div class="line">sequence</div><div class="line"></div><div class="line"><span class="number">0</span></div></pre></td></tr></table></figure></p>
 <h6 id="其他功能："><a href="#其他功能：" class="headerlink" title="其他功能："></a><strong><font color="#FF7256">其他功能：</font></strong></h6><p>HTTP/1.1版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。</p>
 <p>另外，客户端请求的头信息新增了Host字段，用来指定服务器的域名。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Host</span>: www.example.com</div></pre></td></tr></table></figure></p>
 <p>有了Host字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下了基础。</p>
