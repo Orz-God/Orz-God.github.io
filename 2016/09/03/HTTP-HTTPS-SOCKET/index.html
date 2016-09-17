@@ -130,7 +130,7 @@ http://www.androidchina.net/4710.htmlhttp://www.androidchina.net/3934.htmlhttp:/
 <meta property="og:image" content="http://storage2.imgchr.com/HTTPSd4998.png">
 <meta property="og:image" content="http://i2.buimg.com/567571/52da9cfd2c9ef658.png">
 <meta property="og:image" content="http://storage1.imgchr.com/images/OSI.gif">
-<meta property="og:updated_time" content="2016-09-13T05:14:13.920Z">
+<meta property="og:updated_time" content="2016-09-16T16:23:10.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP/HTTPS/SOCKET">
 <meta name="twitter:description" content="写在本文之前先声明一点：本文是作者通过收集的文章以及自己的看法统一精心整理而成的，主要的参考链接已给出，若想更加全面的理解HTTP协议，建议阅读《图解HTTP》一书，本文花费作者大量时间和精力，未经作者允许禁止转载！
@@ -370,7 +370,7 @@ http://www.androidchina.net/4710.htmlhttp://www.androidchina.net/3934.htmlhttp:/
 <li><p>无法证明报文的完整性，所以有可能已遭篡改</p>
 </li>
 </ol>
-<p>些问题不仅在 HTTP 上出现，其他未加密的协议中也会存在这类问题。</p>
+<p>这些问题不仅在 HTTP 上出现，其他未加密的协议中也会存在这类问题。</p>
 <p>除此之外，HTTP 本身还有很多缺点。而且，还有像某些特定的 Web 服务器和特定的 Web 浏览器在实际应用中存在的不足（也可以说成是脆弱性或安全漏洞），另外，用 Java 和 PHP 等编程语言开发的 Web 应用也可能存在安全漏洞。</p>
 <p><strong><font color="#FF7256">通信使用明文可能会被窃听</font></strong></p>
 <ol>
@@ -434,8 +434,8 @@ http://www.androidchina.net/4710.htmlhttp://www.androidchina.net/3934.htmlhttp:/
 <p><img src="http://storage1.imgchr.com/images/318e4ee4d75de441.png" alt="enter image description here"></p>
 <p>报文首部：客户端和服务器处理时七至关重要作用的信息几乎都在这里面；</p>
 <p>报文主体：所需要的用户和资源的信息都在这里面。</p>
-<p>　　其中空行用于区分报文首部和报文主体内容，是由一个回车符和一个换行符组成。</p>
-<p>　　无论是请求报文还是响应报文都需要有报文首部，当然报文主体有的请求报文是没有的。<br>　　<br>　　1. 请求行包含用于请求的方法，请求 URI 和 HTTP 版本。</p>
+<p>其中空行用于区分报文首部和报文主体内容，是由一个回车符和一个换行符组成。</p>
+<p>无论是请求报文还是响应报文都需要有报文首部，当然报文主体有的请求报文是没有的。<br>　　<br>　　1. 请求行包含用于请求的方法，请求 URI 和 HTTP 版本。</p>
 <p>　　2. 状态行包含表明响应结果的状态码，原因短语和 HTTP 版本。<br>　　<br>状态行格式如下：</p>
 <p>HTTP-Version Status-Code Reason-Phrase CRLF</p>
 <p>其中，HTTP-Version表示服务器HTTP协议的版本；Status-Code表示服务器发回的响应状态代码；Reason-Phrase表示状态代码的文本描述。</p>
@@ -1389,7 +1389,7 @@ http://www.androidchina.net/4710.htmlhttp://www.androidchina.net/3934.htmlhttp:/
 <h6 id="分块传输编码："><a href="#分块传输编码：" class="headerlink" title="分块传输编码："></a><strong><font color="#FF7256">分块传输编码：</font></strong></h6><p>使用Content-Length字段的前提条件是，服务器发送回应之前，必须知道回应的数据长度。</p>
 <p>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模式”（stream）取代”缓存模式”（buffer）。</p>
 <p>因此，1.1版规定可以不使用Content-Length字段，而使用“分块传输编码”（chunked transfer encoding）。只要请求或回应的头信息有Transfer-Encoding字段，就表明回应将由数量未定的数据块组成。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div></pre></td></tr></table></figure></p>
-<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="java"><span class="number">25</span></span></div><div class="line">This is the data in the first chunk</div><div class="line"></div><div class="line"><span class="number">1</span>C</div><div class="line">and <span class="keyword">this</span> is the second one</div><div class="line"></div><div class="line"><span class="number">3</span></div><div class="line">con</div><div class="line"></div><div class="line"><span class="number">8</span></div><div class="line">sequence</div><div class="line"></div><div class="line"><span class="number">0</span></div></pre></td></tr></table></figure></p>
+<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="undefined">25</span></div><div class="line">This is the data in the first chunk</div><div class="line"></div><div class="line">1C</div><div class="line">and this is the second one</div><div class="line"></div><div class="line">3</div><div class="line">con</div><div class="line"></div><div class="line">8</div><div class="line">sequence</div><div class="line"></div><div class="line">0</div></pre></td></tr></table></figure></p>
 <h6 id="其他功能："><a href="#其他功能：" class="headerlink" title="其他功能："></a><strong><font color="#FF7256">其他功能：</font></strong></h6><p>HTTP/1.1版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。</p>
 <p>另外，客户端请求的头信息新增了Host字段，用来指定服务器的域名。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Host</span>: www.example.com</div></pre></td></tr></table></figure></p>
 <p>有了Host字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下了基础。</p>
@@ -1997,7 +1997,7 @@ var duoshuoQuery = {short_name:"orz-god"};
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -2006,7 +2006,7 @@ var duoshuoQuery = {short_name:"orz-god"};
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-count">23</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
