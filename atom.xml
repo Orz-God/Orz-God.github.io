@@ -1,28 +1,653 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>鱼人孑</title>
+  <title>VimPeanut</title>
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-13T17:17:41.379Z</updated>
+  <updated>2016-11-18T07:27:53.721Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>Orz-God</name>
+    <name>Peanut</name>
     
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>javascript功能插件</title>
+    <link href="http://yoursite.com/2016/11/21/JS%E6%8F%92%E4%BB%B6/"/>
+    <id>http://yoursite.com/2016/11/21/JS插件/</id>
+    <published>2016-11-21T03:01:38.000Z</published>
+    <updated>2016-11-18T07:27:53.721Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>原文链接 <a href="https://github.com/Orz-God/awesome-javascript-cn" target="_blank" rel="external">https://github.com/Orz-God/awesome-javascript-cn</a></p>
+</blockquote>
+<p>#####包管理器</p>
+<p>管理着 javascript 库，并提供读取和打包它们的工具。</p>
+<p>•npm – npm 是 javascript 的包管理器。</p>
+<p>•Bower – 一个 web 应用的包管理器。</p>
+<p>•component – 能构建更好 web 应用的客户端包管理器。</p>
+<p>•spm – 全新的静态包管理器。</p>
+<p>•jam – 一个专注于浏览器端和兼容 RequireJS 的包管理器。</p>
+<p>•jspm – 流畅的浏览器包管理器。</p>
+<p>•Ender – 没有库文件的程序库。</p>
+<p>•volo – 以项目模板、添加依赖项与自动化生成的方式创建前端项目。</p>
+<p>•Duo – 一个整合 Component、Browserify 和 Go 的最佳思想，使开发者能快速方便地组织和编写前端代码的下一代包管理器。</p>
+<p>#####加载器</p>
+<p>JavaScript 的模块或加载系统。</p>
+<p>•RequireJS – JavaScript 文件和模块的加载器。</p>
+<p>•browserify – 在浏览器端以 node.js 的方式 require()。</p>
+<p>•SeaJS – 用于 Web 的模块加载器。</p>
+<p>•HeadJS – HEAD 的唯一脚本。</p>
+<p>•curl – 小巧、快速且易扩展的模块加载器，它能处理 AMD、CommonJS Modules/1.1、CSS、HTML/text 和历史脚本。</p>
+<p>•lazyload – 小巧且无依赖的异步 JavaScript 和 CSS 加载器。</p>
+<p>•script.js – 异步 JavaScript 加载器和依赖管理器。</p>
+<p>•systemjs – AMD、CJS（commonJS） 和符合 ES6 规范的模块加载器。</p>
+<p>•LodJS – 基于 AMD 的模块加载器。</p>
+<p>•ESL – 浏览器端的模块加载器，支持延迟定义和 AMD。</p>
+<p>•modulejs – 轻量的 JavaScript 模块系统。</p>
+<p>#####打包工具</p>
+<p>•browserify – Browserify 让你能在浏览器端使用 require(‘modules’) ，打包所有依赖。</p>
+<p>•webpack – 为浏览器打包 CommonJs/AMD 模块。</p>
+<p>#####测试框架</p>
+<p>•mocha – 适用于 node.js 和浏览器、简易、灵活、有趣的 JavaScript 测试框架。</p>
+<p>•jasmine – 简单无 DOM 的 JavaScript 测试框架。</p>
+<p>•qunit – 一个易于使用的 JavaScript 单元测试框架。</p>
+<p>•jest – 简单的 JavaScript 单元测试框架。</p>
+<p>•prova – 基于 Tape 和 Browserify 的测试运行器，它适用于 Node &amp; 浏览器。</p>
+<p>•DalekJS – 自动化且跨浏览器的 JavaScript 功能测试框架。</p>
+<p>#####断言</p>
+<p>•chai – 适用于 node.js 和浏览器的 BDD / TDD 断言框架，并能搭配其它测试框架使用。</p>
+<p>•Sinon.JS – 对 JavaScript 进行 spies、stubs 和 mock 测试。</p>
+<p>•expect.js – 简约的、适用于 Node.js 和浏览器端的 BDD 式断言工具。</p>
+<p>#####覆盖率</p>
+<p>•istanbul – 另一个 JS 代码覆盖率检测工具。</p>
+<p>•blanket – 一个简单的代码覆盖率检测库。它的设计理念是易于安装和使用，且可用于浏览器端和 node.js。</p>
+<p>•JSCover – JSCover 是一个检测 JavaScript 程序代码覆盖率的工具。</p>
+<p>#####运行器</p>
+<p>•phantomjs – 脚本化的 Headless WebKit。</p>
+<p>•slimerjs – 一个内核为 Gecko 的类似 PhantomJS 工具。</p>
+<p>•casperjs – 基于 PhantomJS 和 Slimer JS 的导航脚本和测试工具。</p>
+<p>•zombie – 基于 node.js 、快速、全栈且无图形界面的浏览器的测试工具。</p>
+<p>•totoro – 一个简单可靠且能跨浏览器运行的测试工具。</p>
+<p>•karma – 一个优秀的的 JavaScript 测试运行器。</p>
+<p>•nightwatch – 基于 node.js 和 selenium webdriver 的图形界面自动化测试框架。</p>
+<p>•intern – 下一代 JavaScript 代码测试栈。</p>
+<p>•yolpo – 在浏览器逐句执行的 JavaScript 解释器。</p>
+<p>#####QA 工具</p>
+<p>•JSHint – JSHint 是一个有助于发现 JavaScript 代码错误和潜在问题的工具。</p>
+<p>•jscs – JavaScript 代码风格检测工具。</p>
+<p>•jsfmt – 格式化、搜索和改写 JavaScript。</p>
+<p>•jsinspect – 检测复制粘贴和结构类似的代码。</p>
+<p>•buddy.js – 发现 JavaScript 代码里的 魔术数字。</p>
+<p>•ESLint – 完全插件化的工具，能在 JavaScript 中识别和记录模式。</p>
+<p>•JSLint – 高标准、严格和固执的代码质量工具，旨在只保持语言的优良部分。</p>
+<p>#####MVC 框架和库</p>
+<p>•angular.js – 为网络应用增强 HTML。</p>
+<p>•aurelia – 一个适用于移动设备、桌面电脑和 web 的客户端 JavaScript 框架。</p>
+<p>•backbone – 给你的 JS 应用加入带有 Models、Views、Collections 和 Events 的 Backbone。</p>
+<p>•batman.js – 最适合 Rails 开发者的 JavaScript 框架。</p>
+<p>•ember.js – 一个旨在创建非凡 web 应用的 JavaScript 框架。</p>
+<p>•meteor – 一个超简单的、数据库无处不在的、只传输数据的纯 JavaScript web 框架。</p>
+<p>•ractive – 新一代 DOM 操作。</p>
+<p>•vue – 一个用于构建可交互界面的、直观快速和可组合的 MVVM 框架。</p>
+<p>•knockout – Knockout 用 JavaScript 让创建响应式的富 UI 更加容易。</p>
+<p>•spine – 构建 JavaScript 应用的轻量 MVC 库。</p>
+<p>•espresso.js – 一个极小的、用于制作用户界面的 JavaScript 库。</p>
+<p>•canjs – 让 JS 更好、更快、更简单。</p>
+<p>•react – 用于建构用户界面的库。它是声明式的、高效的和极度灵活的，并使用虚拟 DOM 作为其不同的实现。</p>
+<p>•react-native – 一个用 React 构建原生应用的框架。</p>
+<p>•riot – 类 React 库，但很轻量。</p>
+<p>•thorax – 加强你的 Backbone。</p>
+<p>•chaplin – 使用 Backbone.js 库的 JavaScript 应用架构。</p>
+<p>•marionette – 一个 Backbone.js 的复合应用程序库，旨在简化大型 JavaScript 应用结构。</p>
+<p>•ripple – 一个小巧的、用于构建响应界面的基础框架。</p>
+<p>•rivets – 轻量却拥有强大的数据绑定和模板解决方案</p>
+<p>•derby – 让编写实时和协同应用更简单的 MVC 框架，能够在 Node.js 和浏览器同时运行。 ◦derby-awesome – 很棒的 derby 组件集合。</p>
+<p>•way.js – 简单、轻量、持久化的双向数据绑定。</p>
+<p>•mithril.js – Mithril 是一个客户端 MVC 框架（轻量、强大和快速）</p>
+<p>•jsblocks – jsblocks 是一个更好的 MV-ish 框架。</p>
+<p>•LiquidLava – 易懂的、用于构建用户界面的 MVC 框架。</p>
+<p>#####Node CMS 框架</p>
+<p>•KeystoneJS – 强大的 CMS 和 web 应用框架。</p>
+<p>•Reaction Commerce – 拥有实时的架构和设计的响应式（reactive） CMS。</p>
+<p>•Ghost – 简单、强大的发布平台。</p>
+<p>•Apostrophe – 提供内容编辑和基本服务的 CMS。</p>
+<p>•We.js – 适用于实时应用、网站或博客的框架。</p>
+<p>•Hatch.js – 拥有社交特性的 CMS 平台。</p>
+<p>•TaracotJS – 拥有快速、极简风格特点且基于Node.js 的 CMS。</p>
+<p>•Nodizecms – 为 CoffeeScript 爱好者准备的 CMS。</p>
+<p>•Cody – 拥有所见即所得的编辑器的 CMS。</p>
+<p>•PencilBlue – CMS 和博客平台。</p>
+<p>#####模板引擎</p>
+<p>模板引擎允许您执行字符串插值。</p>
+<p>•mustache.js – 是 JavaScript 中带有  的最简模板。</p>
+<p>•handlebars.js – 是 Mustache 模板语言的扩展。</p>
+<p>•hogan.js – 是 Mustache 模板语言的编译器。</p>
+<p>•doT – 最快速简洁的 JavaScript 模板引擎，适用于 nodejs 和浏览器。</p>
+<p>•dustjs – 适用于浏览器和 node.js 的异步模板。</p>
+<p>•eco – 嵌入式的 CoffeeScript 模板。</p>
+<p>•JavaScript-Templates – 轻量（小于 1KB）、快速且无依赖的强大 JavaScript 模版引擎。</p>
+<p>•t.js – 小巧的 JavaScript 模板框架，压缩后约为 400 字节。</p>
+<p>•Jade – 健壮的、优雅且功能丰富的 nodejs 模板引擎。</p>
+<p>•EJS – 高效的 JavaScript 模板。</p>
+<p>•xtemplate – 可扩展的模板引擎，适用于 node 和浏览器。</p>
+<p>•marko – 快速轻量且基于 HTML 的模板引擎，支持异步、流、自定义标签和 CommonJS 模编译后输出。适用于 Node.js 和浏览器。</p>
+<p>#####文章和帖子</p>
+<p>•The JavaScript that you should know – 关于 JavaScript 函数化概念的文章。</p>
+<p>#####数据可视化</p>
+<p>######Web 数据可视化工具</p>
+<p>•d3 – 一个对 HTML 和 SVG 进行可视化的 JavaScript 库。</p>
+<p>•metrics-graphics – 更简洁和拥有更规范的数据图表布局优化算法的库。</p>
+<p>•pykcharts.js – 经过精心设计后，去除 d3.js 复杂性的 d3.js 图表库。</p>
+<p>•three.js – JavaScript 3D 库。</p>
+<p>•Chart.js – 简单的、基于 canvas 标签的 HTML5 图表库。</p>
+<p>•paper.js – 是矢量图形脚本中的瑞士军刀 —— 使用 HTML5 Canvas 将 Scriptographer  移植到 JavaScript 和浏览器。</p>
+<p>•fabric.js – JavaScript Canvas 库，SVG 与 Canvas 可以相互解析。</p>
+<p>•peity – 进度条、线状和饼状图。</p>
+<p>•raphael – JavaScript 矢量库。</p>
+<p>•echarts – 商业产品图表。</p>
+<p>•vis – 动态的、基于浏览器的可视化库。</p>
+<p>•two.js – 一个渲染器无关的适用于 web 的二维绘图 api 。</p>
+<p>•g.raphael – 基于 Rapha?l 图表库。</p>
+<p>•sigma.js – 一个致力于图形绘画的 JavaScript 库。</p>
+<p>•arbor – 一个使用 web workers 和 jQuery 的图形可视化库。</p>
+<p>•cubism – 可视化时间序列的 D3 插件。</p>
+<p>•dc.js – 与 crossfilter 无缝合作的多维图表绘制库，使用 d3.js 渲染。</p>
+<p>•vega – 一套可视化语法。</p>
+<p>•processing.js – Processing.js 基于 Web 标准使数据可视化，而无需任何插件。</p>
+<p>•envisionjs – 动态的 HTML5 可视化。</p>
+<p>•rickshaw – 用于构建交互式实时图表的 JavaScript 工具包。</p>
+<p>•flot – 吸引人的、基于 jQuery 的 JavaScript 图表库。</p>
+<p>•morris.js – 漂亮的时间序列线框图。</p>
+<p>•nvd3 – 一个为 D3.js 构建可复用图表和图表组件的库。</p>
+<p>•svg.js – 一个轻量的、用于操作和添加 SVG 动画的库。</p>
+<p>•heatmap.js – 基于 HTML5 canvas 的热力图 JavaScript 库。</p>
+<p>•jquery.sparkline – 一个直接在浏览器端生成小型走势图的 jQuery 插件。</p>
+<p>•xCharts – 一个基于 D3、用于构建自定义图表和图形的库。</p>
+<p>•trianglify – 基于 d3.js 的低多边形（low poly）风格背景图片生成器。</p>
+<p>•d3-cloud – 创建词云（word cloud）效果的 JavaScript 库。</p>
+<p>•d4 – 一个基于 D3 、友好、可复用的 DSL 图表库 。</p>
+<p>•dimple.js – 基于 d3 的简易商业分析图表库。</p>
+<p>•chartist-js – 简单的响应式图表。</p>
+<p>•epoch – 一个通用的实时图表库。</p>
+<p>•c3 – 基于 D3 的可复用图表库。</p>
+<p>•BabylonJS – 一个运用 HTML5 和 WebGL 构建 3D 游戏的框架。</p>
+<p>也有一些很棒的收费库，如 amchart、plotly 和 highchart。</p>
+<p>#####时间轴</p>
+<p>•TimelineJS –  一个用 JavaScript 编写的可叙事时间轴库。</p>
+<p>•timesheet.js – 用于构建简单的 HTML5 &amp; CSS3 时间表的 JavaScript 库。</p>
+<p>#####编辑器</p>
+<p>•ace – Ace（Ajax.org Cloud9 Editor）。</p>
+<p>•CodeMirror – 浏览器端的代码编辑器。</p>
+<p>•esprima – 用于综合分析的 ECMAScript 解析器。</p>
+<p>•quill – 一个带有 API 的跨浏览器富文本编辑器。</p>
+<p>•medium-editor – Medium.com 所见即所得编辑器的克隆版。</p>
+<p>•pen – 享受在线编辑（支持 markdown）。</p>
+<p>•jquery-notebook – 一个易用的、简洁优雅的文本编辑器。灵感来源于 Medium 的魅力。</p>
+<p>•bootstrap-wysiwyg – 小巧的、兼容 bootstrap 的所见即所得的富文本编辑器。</p>
+<p>•ckeditor-releases – 适用于每个人的 web 文本编辑器。</p>
+<p>•editor – 一个 markdown 编辑器，但仍在开发中。</p>
+<p>•EpicEditor – 一个可嵌入的 JavaScript Markdown 的编辑器，拥有全屏编辑、即时预览、自动保存草稿和离线支持等功能。</p>
+<p>•jsoneditor – 查看、编辑和格式化 JSON 的 web 工具。</p>
+<p>•vim.js –  拥有持久化 ~/.vimrc 的 Vim 编辑器的 JavaScript 移植版本。</p>
+<p>•Squire – HTML5 富文本编辑器。</p>
+<p>•TinyMCE – JavaScript 富文本编辑器。</p>
+<p>•trix – 由 Basecamp 制作，适用于每天写作的富文本编辑器。</p>
+<p>#####文件</p>
+<p>处理文件的库</p>
+<p>•Papa Parse – 一款强大的 CSV 库，支持解析 CSV 文件/字符串，也能导出 CSV。</p>
+<p>•jBinary – 对用声明式语法描述文件类型和数据结构的二进制文件，进行高级 I/O（加载、解析、操作、序列化、存储）操作。</p>
+<p>#####函数式编程</p>
+<p>函数式编程库扩展了 JavaScript 的能力。</p>
+<p>•underscore – JavaScript 的实用工具。</p>
+<p>•lodash – 提供一致性、可定制、高性能和额外功能的实用库。</p>
+<p>•Sugar – 一个扩展了原生对象功能的 JavaScript 库。</p>
+<p>•lazy.js – 类似 Underscore，但性能更优越</p>
+<p>•ramda – 一个针对 JavaScript 程序员的实用函数库。</p>
+<p>•mout – 模块化的 JavaScript 工具库。</p>
+<p>•mesh – 流数据同步工具。</p>
+<p>#####响应式编程</p>
+<p>响应式程序库扩展了 JavaScript 的能力。</p>
+<p>•RxJs – 对 JavaScript 进行响应式扩展。</p>
+<p>•Bacon – JavaScript 的 FPR（函数式响应式编程）库。</p>
+<p>•Kefir – 受 Bacon.js 和 RxJS 启发的 FRP 库，专注于高性能和低内存消耗。</p>
+<p>•Highland – 对 JavaScript 实用工具的重新思考，Highland 能轻易地管理同步和异步信息，而且仅使用标准 JavaScript 和类 Node 流。</p>
+<p>•Most.js – 高性能 FRP 库。</p>
+<p>#####数据结构</p>
+<p>数据结构库用于构建一个更复杂的应用。</p>
+<p>•immutable-js – 不可变的数据集合，包括 Sequence、Range、Repeat、Map、OrderedMap、Set 和 sparse Vector。</p>
+<p>•mori – 使用 ClojureScript 持久化数据结构和支持原生 JavaScript API 的库。</p>
+<p>•buckets – 完整的、经过充分测试和记录数据结构的 JavaScript 库。</p>
+<p>•hashmap – 简单的 hashmap 实现，支持任何类型的键值。</p>
+<p>#####日期</p>
+<p>日期库</p>
+<p>•moment – 解析、验证、操作和显示日期。</p>
+<p>•moment-timezone – 基于 moment.js 的时区库。</p>
+<p>•jquery-timeago – 一款支持自动更新模糊时间戳的 jQuery 插件（如：”4 分钟之前”）。</p>
+<p>•timezone-js – 让 JavaScript Date 对象拥有时区功能。使用 Olson zoneinfo 文件记录着时区数据。</p>
+<p>•date – 拥有人性化的 Date() 方法。</p>
+<p>•ms.js – 小巧的毫秒转换工具。</p>
+<p>#####字符串</p>
+<p>字符串库</p>
+<p>•selecting – 一个允许你获取用户选定文本的库。</p>
+<p>•underscore.string – 扩展了 Underscore.js 的字符串操作。</p>
+<p>•string.js – 额外的 JavaScript 字符串方法。</p>
+<p>•he – 健壮的 HTML 实体编码/解码器。</p>
+<p>•multiline – 多行字符串。</p>
+<p>•query-string – 解析和字符串化 URL 查询字符串。</p>
+<p>•URI.js – URL 操作库。</p>
+<p>•jsurl – 轻量的 URL 操作库。</p>
+<p>•sprintf.js – 实现字符串格式化。</p>
+<p>•url-pattern – 让 url 和其它字符串进行比正则表达式匹配更简单。字符串和数据可相互转化。</p>
+<p>#####数字</p>
+<p>•Numeral-js – 对数字进行格式化和操作的库。</p>
+<p>•odometer – 流畅的数字过渡效果。</p>
+<p>•accounting.js – 对数字、金钱、货币进行格式化的轻量库——完全本地化和无依赖。</p>
+<p>•money.js – 一个小巧（1kb）的货币转换库，适用于 web 和 nodeJS。</p>
+<p>•Fraction.js – 一个有理数库。</p>
+<p>•Complex.js –  一个复数库。</p>
+<p>•Polynomial.js – 一个多项式库。</p>
+<p>#####存储</p>
+<p>•store.js – 为所有浏览器封装了 LocalStorage，而没有使用 cookies 和 flash。隐秘地使用 localStorage、globalStorage 和用户数据。</p>
+<p>•localForage – 改善后的离线存储。其封装了 IndexedDB、WebSQL 和 localStorage，拥有操作简单和强大的 API。</p>
+<p>•jStorage – jStorage 是一个简单的键值对数据库，用于在浏览器端存储数据。</p>
+<p>•cross-storage – 获得权限后，能跨域名本地存储。</p>
+<p>•basket.js – 用 localStorage 加载和缓存脚本的资源加载器。</p>
+<p>•bag.js – 可以缓存脚本和加载资源，与 basket.js 相似，但增加了键值对接口和对 localStorage / websql / undexedDB 的支持。</p>
+<p>•basil.js – 智能的 JavaScript 数据持久层库。</p>
+<p>•jquery-cookie – 轻量简单的、用于读取、编辑和删除 cookie 的 jQuery 插件。</p>
+<p>•Cookies – 客户端 Cookie 操作库。</p>
+<p>•DB.js – 基于 Promise 的、封装了 IndexDB 的库。</p>
+<p>•lawnchair.js – 简单的客户端 JSON 存储。</p>
+<p>#####颜色</p>
+<p>•randomColor – JavaScript 颜色生成器。</p>
+<p>•chroma.js – 拥有各种各样颜色操作的 JavaScript 库。</p>
+<p>•color – JavaScript 颜色转换和操作库。</p>
+<p>•colors – 更智能的默认 web 颜色。</p>
+<p>•PleaseJS – 随机创建出赏心悦目的颜色和配色方案。</p>
+<p>•TinyColor – 快速、轻巧的颜色操作和转换库。</p>
+<p>•Vibrant.js – 从图像提取主要颜色。</p>
+<p>#####国际化和本地化（I18n And L10n）</p>
+<p>本地化和国际化 JavaScript 库</p>
+<p>•i18next – JavaScript 最简单的国际化（i18n）方法。</p>
+<p>•polyglot – 小巧的国际化助手库。</p>
+<p>•babelfish – i18n 提供友好易懂的 API ，并且内置多种支持。</p>
+<p>#####类</p>
+<p>•ClassManager – 世界上最快、最方便的类系统之一。</p>
+<p>•klass – 用于创建极富表现力的类工具库。</p>
+<p>•augment – 世界上最小且最快的一流 JavaScript 继承模式。</p>
+<p>#####控制流</p>
+<p>•async – 适用于 node 和浏览器的异步工具库。</p>
+<p>•q – 实现异步的 promise JavaScript 库。</p>
+<p>•step – 让逻辑顺序合理化的异步控制流库。</p>
+<p>•contra – 利用函数风格实现的异步流控制。</p>
+<p>•Bluebird – 专注于革新功能和性能的，功能齐全的 promoise 库。</p>
+<p>•when – 快速可靠的、Promises/A+ 规范的 when() 实现，而且拥有异步其它的优秀特性。</p>
+<p>•ObjectEventTarget – 提供增加了事件监听的原型（与 DOMElement 的 EventTarget 在浏览器行为一致）。</p>
+<p>#####路由</p>
+<p>•director – 一个小巧的、与 URL 同构的路由器。</p>
+<p>•page.js – 受 Express router 启发的小型客户端路由器（约为1200字节）。</p>
+<p>•pathjs – 简单、轻量的 web 路由器。</p>
+<p>•crossroads – JavaScript 路由。</p>
+<p>•davis.js – 使用 pushState、RESTful 风格和可降级的 JavaScript 路由器。</p>
+<p>#####安全性</p>
+<p>•DOMPurify – 针对 HTML、MathML 和 SVG 的仅支持DOM、快速、高容错的 XSS 过滤器。</p>
+<p>•js-xss – 通过白名单配置，即可过滤不信任的 HTML（防止 XSS 攻击）。</p>
+<p>#####日志</p>
+<p>•log – 带有样式的 Console.log。</p>
+<p>•Conzole – 对 JavaScript 原生 console 对象方法和功能进行封装的 debug 面板，使其显示在页面内。</p>
+<p>•console.log-wrapper – 将日志清晰地记录到 console，且兼容所有浏览器。</p>
+<p>•loglevel – 最轻量的 JavaScript 日志记录工具库，向封装后可用的 console.log 方法增加可靠的日志等级。</p>
+<p>•minilog – 轻量的、用流式 API 显示的、可用于客户端和服务器端的日志记录库。</p>
+<p>#####正则表达式</p>
+<p>•RegEx101 – 在线的 JavaScript 正则表达式测试器和调试器。同时支持 Python、PHP 和 PCRE。</p>
+<p>•RegExr – 用于创建、测试和学习正则表达式的 HTML/JS  工具。</p>
+<p>•RegExpBuilder – 使用链式方法创建正则表达式。</p>
+<p>#####媒体</p>
+<p>•Ion.Sound – 可用于任何网页上简单音频。</p>
+<p>#####语音命令</p>
+<p>•annyang – 向网站添加语音命令的语音识别库。</p>
+<p>•voix.js – 向网站、app 或游戏添加语音命令的 JavaScript 库。</p>
+<p>#####API</p>
+<p>•bottleneck – 强大的频率限制器，使调节流量变得更容易。</p>
+<p>•oauth-signature-js – 适用于 node 和 浏览器的 OAuth 1.0a 签名生成器。</p>
+<p>•amygdala – 为 Web 应用提供 RESTful HTTP 客户端解决方案。</p>
+<p>•jquery.rest – 一个让 RESTful API 更易使用的 jQuery 插件。</p>
+<p>#####视觉检测</p>
+<p>•tracking.js – 在 web 上实现计算视觉的一种现代方法。</p>
+<p>•ocrad.js – 通过 Emscripten 用 JavaScript 实现 OCR（光学字符识别）。</p>
+<p>######浏览器检测</p>
+<p>•bowser – 一个浏览器检测器。</p>
+<p>#####代码高亮</p>
+<p>•Highlight.js – JavaScript 语法高亮器。</p>
+<p>•PrismJS – 轻量、健壮和优雅的语法高亮器。</p>
+<p>#####加载状态</p>
+<p>指示加载状态的库</p>
+<p>•Mprogress.js – 创建谷歌 Material 设计风格的线性进度条。</p>
+<p>•NProgress – 在 Ajax’y 应用显示细长型进度条</p>
+<p>•Spin.js – 一个旋转的进度指示器。</p>
+<p>•progress.js – 为页面任何对象创建和管理进度条。</p>
+<p>•progressbar.js – 用 SVG path 动画制作的、漂亮和响应式的进度条。</p>
+<p>•pace – 自动向你的网站添加一个进度条。</p>
+<p>•topbar – 小巧漂亮的、与网站同宽的进度指示器。</p>
+<p>•nanobar – 非常轻量的进度条。不依赖 jQuery。</p>
+<p>•PageLoadingEffects – 使用 SVG 动画展现新内容的现代方式。</p>
+<p>•SpinKit – 运用 CSS 动画的加载指示器集合。</p>
+<p>•Ladda – 内置在按钮的加载指示器。</p>
+<p>•css-loaders – 运用 CSS 动画的旋转加载指示器的集合。</p>
+<p>除了上述这些库，还有收藏在 Codepen 的，另外还有 Ajaxload，Preloaders 和 CSSLoad 这些生成器。</p>
+<p>#####验证</p>
+<p>•Parsley.js – 不用写一行 JavaScript 代码即可在前端验证表单。</p>
+<p>•jquery-validation – jQuery 验证插件。</p>
+<p>•validator.js – 字符串验证和过滤（在使用用户输入之前清理用户输入中的有害或危险字符的操作）。</p>
+<p>•validate.js – 受 CodeIgniter 启发的轻量表单验证 JavaScript 库。</p>
+<p>•validatr – 跨浏览器的 HTML5 表单验证库。</p>
+<p>•BootstrapValidator – 是验证表单域中最好的 jQuery 插件。要与 Bootstrap 3 一起使用。</p>
+<p>•is.js – 检查类型、正则表达式、是否存在、时间等。</p>
+<p>•FieldVal – 多用途验证库。同时支持同步和异步验证。</p>
+<p>#####键盘封装器</p>
+<p>•mousetrap – 处理键盘快捷键的 JavaScript 库。</p>
+<p>•keymaster – 定义和调度键盘快捷键的小型库。</p>
+<p>•Keypress – 键入捕捉工具库，任何键都可以成为一个修饰健。</p>
+<p>•KeyboardJS – 一个用于绑定键盘组合的 JavaScript 库，让你脱离快捷键和快捷键组合冲突的痛苦。</p>
+<p>•jquery.hotkeys – jQuery Hotkeys 能让你在代码任何的地方监听键盘事件，并几乎支持所有按键组合。</p>
+<p>•jwerty – 令人惊叹的键盘事件处理库。</p>
+<p>浏览和引导</p>
+<p>•intro.js – 这是一个介绍新功能的很好方式，能一步步地引导用户浏览你的网站和项目。</p>
+<p>•shepherd – 通过引导让用户浏览你的应用程序。</p>
+<p>•bootstrap-tour – 应用 Twitter Bootstrap 弹出框对产品进行快速简单的引导。</p>
+<p>•tourist – 简单、灵活的应用引导介绍库。</p>
+<p>•chardin.js – 简单的应用遮罩层介绍。</p>
+<p>•pageguide – 使用 jQuery 和 CSS3 的 web 页面元素交互引导库。</p>
+<p>•hopscotch – 让开发者更容易向其页面产品添加引导的框架。</p>
+<p>•joyride – 基于 jQuery 的功能引导插件。</p>
+<p>•focusable – 通过向页面其余部分添加遮罩层，使焦点聚集在特定 DOM 元素。</p>
+<p>#####通知</p>
+<p>•messenger – 为你的应用添加 Growl-style 弹框和信息（Crowl 是 Mac OS X 下的一个通知系统）。</p>
+<p>•noty – jQuery 通知插件。</p>
+<p>•pnotify – 适用于 Bootstrap、jQuery UI 和 Web Notifications Draft 的 JavaScript 通知库。</p>
+<p>•toastr – 简单的弹出框通知（toast notifications：用来显示简单的，会自动到期的信息窗口）。</p>
+<p>•humane-js – 一个简单、时髦的浏览器通知系统。</p>
+<p>•smoke.js – 与框架无关的、能够自定义样式的 JavaScript 弹框系统。</p>
+<p>#####幻灯片</p>
+<p>•Swiper – 使用硬件加速过渡的移动设备触控滑块框架。</p>
+<p>•slick – 你所需要的最后一个轮播插件。</p>
+<p>•slidesJs – 响应式的 jQuery（1.7.1+）幻灯片插件，具有触摸、 CSS3 过渡等特性。</p>
+<p>•FlexSlider – 一款令人惊叹的、全响应式的幻灯片 jQuery 插件。</p>
+<p>•unslider – 最简单的幻灯片 jQuery 插件。</p>
+<p>•colorbox – 轻量、可自定义的灯箱 jQuery 插件。</p>
+<p>•fancyBox – 提供了良好优雅的方式，为页面上的图片、html 内容和多媒体添加缩放功能的工具。</p>
+<p>•sly – 基于项导航的、支持单向滚动的 JavaScript 库。</p>
+<p>•vegas – 向页面添加漂亮的全屏背景的 jQuery 插件，甚至允许幻灯片。</p>
+<p>•Sequence – 用于创建响应式的幻灯片、演示、旗帜广告和以步骤为基础的应用的 CSS 动画框架。</p>
+<p>•baguetteBox.js – 易于使用的、用纯 JavaScript 实现的遮罩层脚本。</p>
+<p>•reveal.js – 用 HTML 创建漂亮演示控件的框架。</p>
+<p>•PhotoSwipe – 适用于移动设备和桌面电脑的、模块化和不无依赖框架的 JavaScript 画廊控件。</p>
+<p>•jcSlider – 用 CSS 动画实现的响应式幻灯片 jQuery 插件。</p>
+<p>•basic-jquery-slider – 易于使用、指定主题和定制化。</p>
+<p>•unslider –  这是最简单的幻灯片 jQuery 插件。</p>
+<p>•jQuery.adaptive-slider – 带有自适应颜色标题和导航的幻灯片 jQuery 插件。</p>
+<p>•slidr – 可添加一些幻灯片效果。</p>
+<p>•Flickity – 可触摸的、响应式的和可轻弹的画廊。</p>
+<p>#####滑块控件</p>
+<p>•Ion.RangeSlider – 强大的、易于自定义的范围滑块选择库，支持很多配置和皮肤。</p>
+<p>•jQRangeSlider – 支持日期的滑块选择库。</p>
+<p>•noUiSlider – 轻量无冗余的、高度定制化的滑块选择库。</p>
+<p>•rangeslider.js – HTML5  input 区域滑块元素。</p>
+<p>#####表单组件</p>
+<p>输入</p>
+<p>•typeahead.js – 快速的、功能齐全的自动补全库。</p>
+<p>•tag-it – 处理多标签字段以及标签建议/自动完成的 jQuery UI 插件。</p>
+<p>•At.js – 向你的应用添加类似 Github 的自动完成提示功能。</p>
+<p>•Placeholders.js – JavaScript 补全 HTML5 占位符的属性。</p>
+<p>•fancyInput – 利用 CSS3 效果让输入更有趣。</p>
+<p>•jQuery-Tags-Input – 利用这个 jQuery 插件，可奇妙地将一个简单的文本输入转换成一个酷酷的标签列表。</p>
+<p>•vanilla-masker – 一个纯 JavaScript 实现的输入控制库。</p>
+<p>•Ion.CheckRadio – 一个为复选框和单选按钮添加样式的 jQuery 库，支持多种皮肤。</p>
+<p>#####日历</p>
+<p>•pickadate.js – 对移动设备友好的、响应式的和轻量的 jQuery 日期 &amp; 时间输入选择器。</p>
+<p>•bootstrap-datepicker – 基于 bootstrap 的日历选择器。</p>
+<p>•Pikaday – 一个崭新的 JavaScript 日期选择器 —— 轻量、无依赖和模块化的 CSS。</p>
+<p>•fullcalendar – 全尺寸、支持拖放事件的日历（jQuery 插件）。</p>
+<p>•rome – 可定制的日期（和时间）选择器。无依赖，可选 UI。</p>
+<p>•datedropper –  datedropper 是一个 jQuery 插件，它提供了快速简易的方式去管理日期输入框。</p>
+<p>#####选择</p>
+<p>•selectize.js – Selectize 是文本框和选择框的混合体。它基于jQuery，拥有自动完成和键盘感应下拉列表功能，可用于标签、联系人列表等。</p>
+<p>•select2 – 它基于 jQuery，是选择框（select box）的替代品。支持搜索、远程数据集和无限滚动。</p>
+<p>•chosen – 可以让冗长不便的选择框更友好的库。</p>
+<p>#####文件上传</p>
+<p>•jQuery-File-Upload – File Upload 是一个支持多文件选择、文件拖放、进度条、验证和图片、音频、视频预览的 jQuery 插件。</p>
+<p>•dropzone – Dropzone 是一个易于使用且支持多文件拖放的库。其支持图片预览并且拥有很好的进度条效果。</p>
+<p>•flow.js – 一个通过 HTML5 的 File API ，提供多个同时链接的、稳定的、容错的、可恢复的/可重新开始的文件上传库。</p>
+<p>•fine-uploader – 一个带有进度条、拖放功能和支持直接上传到 S3 （Amazon Simple Storage Service，亚马逊简易存储服务）的多文件上传插件。</p>
+<p>•FileAPI – JavaScript 文件工具集合。支持多文件上传、拖放和文件分块上传。对于图像，支持裁剪、调整大小和根据 EXIF 自动调整方向。</p>
+<p>•plupload – 处理文件上传的 JavaScript API，其支持多文件选择、文件类型过滤、分块请求、客户端图片缩放和根据不同的运行环境选择 HTML5、Silverlight 和 Flash。</p>
+<p>#####其它</p>
+<p>•form – jQuery 表单插件。</p>
+<p>•Garlic.js – 自动在本地保存表单文本和选择框的值，直到表单被提交。</p>
+<p>•Countable – 对某个 HTML 元素包含文本的段落数、单词数和字符数进行统计的 JavaScript 函数。</p>
+<p>•card – 只需一行代码，让信用卡表单变得更友好。</p>
+<p>•stretchy – 自适应大小的 form 元素，表单本应该是这样的。</p>
+<p>•list.js – 向表格、列表等 HTML 元素添加搜索、排序、过滤和自适应功能的库。在已有 HTML 上增加可视化。</p>
+<p>#####提示</p>
+<p>•tipsy – 基于 jQuery 的 Fackbook 风格的提示工具（tooltip）。</p>
+<p>•opentip – 开源且基于 prototype 框架的 JavaScript 工具提示库。</p>
+<p>•qTip2 – 非常强大的工具提示库。</p>
+<p>•tooltipster – 一个工具提示 jQuery 插件。</p>
+<p>•simptip – 用 Sass 制作的、简单的工具提示。</p>
+<p>•jquery-popup-overlay – 是一个响应式的和可访问性强的模态框（modal）和工具提示框 jQuery 插件。</p>
+<p>#####模态框和弹出框（Modals and Popups）</p>
+<p>•Magnific-Popup – 专注于性能、轻量、响应式的灯箱（lightbox）脚本。</p>
+<p>•jquery-popbox – jQuery 提示框插件。</p>
+<p>•jquery.avgrund.js – 一种新的定于弹出的模态框 jQuery 插件。</p>
+<p>•vex – 新的、拥有高度可配置和易于改变样式功能的对话框库。</p>
+<p>•bootstrap-modal – 对 Bootstrap 默认的模态框类进行扩展。其支持响应式、可堆叠和 ajax 等。</p>
+<p>•css-modal – 纯 CSS 打造的模态框。</p>
+<p>•jquery-popup-overlay – 是一个响应式的和可访问性强的模态框和工具提示框（tooltips）jQuery 插件。</p>
+<p>#####滚动</p>
+<p>•scrollMonitor – 滚动发生时，可以监听元素的、简单、快速的 API。</p>
+<p>•headroom – 除非你需要显示页面头部（header），否则将隐藏它，以腾出页面头部空间。</p>
+<p>•onepage-scroll – 创建一个类似 Apple 的单页面滚动网站（iPhone 5S  网站）。</p>
+<p>•iscroll – 高性能、轻量、无依赖、兼容多平台的 JavaScript 滚动组件。</p>
+<p>•skrollr – 独立（不依赖 jQuery） 的视差滚动库，适用于移动设备（Android + iOS）和桌面电脑。</p>
+<p>•parallax – 面向智能设备的视差引擎。</p>
+<p>•stellar.js – 让视差滚动变简单。</p>
+<p>•plax – 基于 jQuery 的视差库。</p>
+<p>•jparallax – 创建可交互视差效果的 jQuery 插件。</p>
+<p>•fullPage – 简单和易于使用的、用于创建全屏滚动网站的插件（也被称为单页面网站）。</p>
+<p>•ScrollMenu – 让老旧无聊的滚动条焕然一新。</p>
+<p>#####菜单</p>
+<p>•jQuery-menu-aim – 当用户光标放在特定下拉菜单项时触发事件。可制作响应式的、大数据量的下拉菜单，如 Amazon 的。</p>
+<p>•jQuery contextMenu – 右键菜单（contextMenu） 管理工具。</p>
+<p>•Slideout – 为移动设备的 web 应用制作出响应式的、可触摸滑出的导航菜单。</p>
+<p>•Slide and swipe – 一个基于 touchSwipe 库的滑出菜单插件。</p>
+<p>#####表格/网格</p>
+<p>•jTable – 基于 CRUD 表创建 AJAX 的 jQuery 插件。</p>
+<p>•DataTables – 这是一个非常灵活的工具，在渐进增强的基础上，将高级的交互效果加到 HTML 表格。（jQuery 插件）</p>
+<p>•floatThead – （jQuery 插件）锁定表格头部，只允许表格内容滚动。适用于任何表格，而且不需要额外的 html 或 css。</p>
+<p>•Masonry – 瀑布流式的网格布局库。</p>
+<p>•Packery – 使用装箱算法（bin-packing）的网格布局库。支持拖拽布局。</p>
+<p>•Isotope – 可过滤和可排序的网格布局的库，它能实现 Masonry、Packery 等布局。</p>
+<p>#####框架</p>
+<p>•Semantic UI – 拥有大量主题和元素的 UI 套件。</p>
+<p>#####手势</p>
+<p>•hammer.js – 拥有多种触摸手势的 JavaScript 库。</p>
+<p>•touchemulator – 在桌面电脑模仿触摸输入。</p>
+<p>•Dragula – 超级易于使用的拖拽库。</p>
+<p>#####地图</p>
+<p>•Leaflet – 对移动设备友好的、可交互的地图 JavaScript 库。</p>
+<p>•Cesium – 开源的、基于 WebGL 实现的虚拟地球仪和地图引擎。</p>
+<p>•gmaps – 以最简单的方式使用 Google 地图。</p>
+<p>•polymaps – 一个免费的、兼容现代 web 浏览器的、用于制作动态可交互的地图 JavaScript 库。</p>
+<p>•kartograph.js – 开源的 Kartograph SVG 地图渲染器。</p>
+<p>•mapbox.js – Mapbox 的 API，Leaflet 的插件。</p>
+<p>•jqvmap – 矢量地图 jQuery 插件。</p>
+<p>•OpenLayers3 – 高性能的、功能丰富的库，能满足你对地图所有需求。</p>
+<p>#####视频/音频</p>
+<p>•prettyembed.js – 更完美地嵌入 YouTube —— 拥有很好的选项，如高分辨率的预览图、嵌入选项的高级定制和可选的 FitVids 支持。</p>
+<p>•html5media – 能在所有主流浏览器播放多媒体标签中定义的多媒体文件。<a href="http://html5media.info/" target="_blank" rel="external">http://html5media.info/</a></p>
+<p>•Play-em JS – Play’em 是一个 JavaScript 组件，它能管理音乐/视频播放顺序，通过在一个 DIV 元素里嵌入几个播放器（Youtube、Soundcloud 和 Vimeo）来控制一系列歌曲的播放。</p>
+<p>•polyplayer – 将 YouTube、Soundcloud 和 Vimeo 播放器的 API 统一成一套。</p>
+<p>•flowplayer –  HTML5 视频播放器 <a href="http://flowplayer.org/" target="_blank" rel="external">http://flowplayer.org/</a></p>
+<p>•mediaelement – 让 HTML5、 Flash 播放器和模仿 HTML5 媒介元素 API 的 Silverlight shim，在所有浏览器拥有一致的 UI。<a href="http://mediaelementjs.com/" target="_blank" rel="external">http://mediaelementjs.com/</a></p>
+<p>•SoundJS – 让音频在 web 上运行更简单的库。它为不同浏览器提供了一致的 API。</p>
+<p>#####动画</p>
+<p>•velocity – 加速 JavaScript 动画。</p>
+<p>•jquery.transit – 拥有超级流畅的 CSS3 变换和过渡的 jQuery 插件。</p>
+<p>•impess.js – 在 HTML 文档里，运用 CSS3 变换和过渡制作类似 Prezi 的展现效果。</p>
+<p>•bounce.js – 可以立刻创建有趣的 CSS3 动画。</p>
+<p>•GreenSock-JS – 适用于所有主流浏览器的高性能 HTML5 动画。</p>
+<p>•TransitionEnd – TransitionEnd 是一个运用 transitonend 事件的、跨浏览器的库。</p>
+<p>•Dynamic.js – 用于创建基于物理知识的 CSS 动画库。</p>
+<p>#####图像处理</p>
+<p>•lena.js – 拥有滤镜和实用功能的图像处理库。</p>
+<p>•pica – 高质量地调整图片大小（拥有快速的、纯 JS 实现的 Lanczos 滤镜算法）。</p>
+<p>•cropper – 一个简单的图像裁剪 jQuery 插件。</p>
+<p>#####ECMAScript 6</p>
+<p>•es6features – ECMAScript 6 特性概述。</p>
+<p>•es6-features – ECMAScript 6:  特性概述和比较。</p>
+<p>•ECMAScript 6 compatibility table – Compatibility tables 展示了各种平台上所有 ECMAScript 6 特性的支持程度。</p>
+<p>•Babel (Formerly 6to5) – 将 ES6+ 代码转换成纯 ES5。</p>
+<p>•Traceur compiler – ES6 特性转 ES5。包括 classes、generators、promises、destructuring patterns、default parameters 等。</p>
+<p>#####软件开发工具包</p>
+<p>•javascript-sdk-design – 从工作和个人经验中提炼出来的 JavaScript SDK 设计指导。</p>
+<p>#####大杂烩</p>
+<p>•echo – 利用 data-* 属性延迟加载图片。</p>
+<p>•picturefill – 响应式图片显示插件，使浏览器支持 srcset、size 属性。</p>
+<p>•platform.js – 一个平台检测库，几乎适用于所有 JavaScript 平台。</p>
+<p>•json3 – 一个现代 JSON 实现库，几乎兼容所有 JavaScript 平台。</p>
+<p>•Logical Or Not – 一个关于 JavaScript 特性的游戏。</p>
+<p>•BitSet.js – 实现位向量的 JavaScript 库。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;原文链接 &lt;a href=&quot;https://github.com/Orz-God/awesome-javascript-cn&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Orz-God/aw
+    
+    </summary>
+    
+      <category term="插件" scheme="http://yoursite.com/categories/%E6%8F%92%E4%BB%B6/"/>
+    
+    
+      <category term="插件" scheme="http://yoursite.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Cookie</title>
+    <link href="http://yoursite.com/2016/11/10/JS-Cookie/"/>
+    <id>http://yoursite.com/2016/11/10/JS-Cookie/</id>
+    <published>2016-11-09T16:00:00.000Z</published>
+    <updated>2016-12-04T03:15:26.969Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>Cookie是服务器保存在浏览器的一小段文本信息，每个Cookie的大小一般不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息。</p>
+<p>Cookie保存以下几方面的信息。</p>
+<ul>
+<li>Cookie的名字</li>
+<li>Cookie的值</li>
+<li>到期时间</li>
+<li>所属域名（默认是当前域名）</li>
+<li>生效的路径（默认是当前网址）</li>
+</ul>
+<p>举例来说，如果当前URL是<code>www.example.com</code>，那么Cookie的路径就是根目录<code>/</code>。这意味着，这个Cookie对该域名的根路径和它的所有子路径都有效。如果路径设为<code>/forums</code>，那么这个Cookie只有在访问<code>www.example.com/forums</code>及其子路径时才有效。</p>
+<p>浏览器可以设置不接受Cookie，也可以设置不向服务器发送Cookie。<code>window.navigator.cookieEnabled</code>属性返回一个布尔值，表示浏览器是否打开Cookie功能。</p>
+<p><code>document.cookie</code>属性返回当前网页的Cookie。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 读取当前网页的所有cookie</span></div><div class="line"><span class="keyword">var</span> allCookies = <span class="built_in">document</span>.cookie;</div></pre></td></tr></table></figure>
+<p>由于<code>document.cookie</code>返回的是分号分隔的所有Cookie，所以必须手动还原，才能取出每一个Cookie的值。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> cookies = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; cookies.length; i++) &#123;</div><div class="line">  <span class="comment">// cookies[i] name=value形式的单个Cookie</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>document.cookie</code>属性是可写的，可以通过它为当前网站添加Cookie。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.cookie = <span class="string">'fontSize=14'</span>;</div></pre></td></tr></table></figure>
+<p>Cookie的值必须写成<code>key=value</code>的形式。注意，等号两边不能有空格。另外，写入Cookie的时候，必须对分号、逗号和空格进行转义（它们都不允许作为Cookie的值），这可以用<code>encodeURIComponent</code>方法达到。</p>
+<p>但是，<code>document.cookie</code>一次只能写入一个Cookie，而且写入并不是覆盖，而是添加。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.cookie = <span class="string">'test1=hello'</span>;</div><div class="line"><span class="built_in">document</span>.cookie = <span class="string">'test2=world'</span>;</div><div class="line"><span class="built_in">document</span>.cookie</div><div class="line"><span class="comment">// test1=hello;test2=world</span></div></pre></td></tr></table></figure>
+<p><code>document.cookie</code>属性读写行为的差异（一次可以读出全部Cookie，但是只能写入一个Cookie），与服务器与浏览器之间的Cookie通信格式有关。浏览器向服务器发送Cookie的时候，是一行将所有Cookie全部发送。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">GET</span> <span class="string">/sample_page.html</span> HTTP/1.1</div><div class="line"><span class="attribute">Host</span>: www.example.org</div><div class="line"><span class="attribute">Cookie</span>: cookie_name1=cookie_value1; cookie_name2=cookie_value2</div><div class="line"><span class="attribute">Accept</span>: */*</div></pre></td></tr></table></figure>
+<p>上面的头信息中，<code>Cookie</code>字段是浏览器向服务器发送的Cookie。</p>
+<p>服务器告诉浏览器需要储存Cookie的时候，则是分行指定。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">HTTP/1.0 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-type</span>: text/html</div><div class="line"><span class="attribute">Set-Cookie</span>: cookie_name1=cookie_value1</div><div class="line"><span class="attribute">Set-Cookie</span>: cookie_name2=cookie_value2; expires=Sun, 16 Jul 3567 06:23:41 GMT</div></pre></td></tr></table></figure>
+<p>上面的头信息中，<code>Set-Cookie</code>字段是服务器写入浏览器的Cookie，一行一个。</p>
+<p>如果仔细看浏览器向服务器发送的Cookie，就会意识到，Cookie协议存在问题。对于服务器来说，有两点是无法知道的。</p>
+<ul>
+<li>Cookie的各种属性，比如何时过期。</li>
+<li>哪个域名设置的Cookie，因为Cookie可能是一级域名设的，也可能是任意一个二级域名设的。</li>
+</ul>
+<h2 id="Cookie的属性"><a href="#Cookie的属性" class="headerlink" title="Cookie的属性"></a>Cookie的属性</h2><p>除了Cookie本身的内容，还有一些可选的属性也是可以写入的，它们都必须以分号开头。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Set-Cookie</span>: value[; expires=date][; domain=domain][; path=path][; secure]</div></pre></td></tr></table></figure>
+<p>上面的<code>Set-Cookie</code>字段，用分号分隔多个属性。它们的含义如下。</p>
+<p>（1）value属性</p>
+<p><code>value</code>属性是必需的，它是一个键值对，用于指定Cookie的值。</p>
+<p>（2）expires属性</p>
+<p><code>expires</code>属性用于指定Cookie过期时间。它的格式采用<code>Date.toUTCString()</code>的格式。</p>
+<p>如果不设置该属性，或者设为<code>null</code>，Cookie只在当前会话（session）有效，浏览器窗口一旦关闭，当前Session结束，该Cookie就会被删除。</p>
+<p>浏览器根据本地时间，决定Cookie是否过期，由于本地时间是不精确的，所以没有办法保证Cookie一定会在服务器指定的时间过期。</p>
+<p>（3）domain属性</p>
+<p><code>domain</code>属性指定Cookie所在的域名，比如<code>example.com</code>或<code>.example.com</code>（这种写法将对所有子域名生效）、<code>subdomain.example.com</code>。</p>
+<p>如果未指定，默认为设定该Cookie的域名。所指定的域名必须是当前发送Cookie的域名的一部分，比如当前访问的域名是<code>example.com</code>，就不能将其设为<code>google.com</code>。只有访问的域名匹配domain属性，Cookie才会发送到服务器。</p>
+<p>（4）path属性</p>
+<p><code>path</code>属性用来指定路径，必须是绝对路径（比如<code>/</code>、<code>/mydir</code>），如果未指定，默认为请求该Cookie的网页路径。</p>
+<p>只有<code>path</code>属性匹配向服务器发送的路径，Cookie才会发送。这里的匹配不是绝对匹配，而是从根路径开始，只要<code>path</code>属性匹配发送路径的一部分，就可以发送。比如，<code>path</code>属性等于<code>/blog</code>，则发送路径是<code>/blog</code>或者<code>/blogroll</code>，Cookie都会发送。<code>path</code>属性生效的前提是<code>domain</code>属性匹配。</p>
+<p>（5）secure</p>
+<p><code>secure</code>属性用来指定Cookie只能在加密协议HTTPS下发送到服务器。</p>
+<p>该属性只是一个开关，不需要指定值。如果通信是HTTPS协议，该开关自动打开。</p>
+<p>（6）max-age</p>
+<p><code>max-age</code>属性用来指定Cookie有效期，比如<code>60 * 60 * 24 * 365</code>（即一年31536e3秒）。</p>
+<p>（7）HttpOnly</p>
+<p><code>HttpOnly</code>属性用于设置该Cookie不能被JavaScript读取，详见下文的说明。</p>
+<p>以上属性可以同时设置一个或多个，也没有次序的要求。如果服务器想改变一个早先设置的Cookie，必须同时满足四个条件：Cookie的<code>key</code>、<code>domain</code>、<code>path</code>和<code>secure</code>都匹配。也就是说，如果原始的Cookie是用如下的<code>Set-Cookie</code>设置的。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Set-Cookie</span>: key1=value1; domain=example.com; path=/blog</div></pre></td></tr></table></figure>
+<p>改变上面这个cookie的值，就必须使用同样的<code>Set-Cookie</code>。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Set-Cookie</span>: key1=value2; domain=example.com; path=/blog</div></pre></td></tr></table></figure>
+<p>只要有一个属性不同，就会生成一个全新的Cookie，而不是替换掉原来那个Cookie。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Set-Cookie</span>: key1=value2; domain=example.com; path=/</div></pre></td></tr></table></figure>
+<p>上面的命令设置了一个全新的同名Cookie，但是<code>path</code>属性不一样。下一次访问<code>example.com/blog</code>的时候，浏览器将向服务器发送两个同名的Cookie。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Cookie</span>: key1=value1; key1=value2</div></pre></td></tr></table></figure>
+<p>上面代码的两个Cookie是同名的，匹配越精确的Cookie排在越前面。</p>
+<p>浏览器设置这些属性的写法如下。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.cookie = <span class="string">'fontSize=14; '</span></div><div class="line">  + <span class="string">'expires='</span> + someDate.toGMTString() + <span class="string">'; '</span></div><div class="line">  + <span class="string">'path=/subdirectory; '</span></div><div class="line">  + <span class="string">'domain=*.example.com'</span>;</div></pre></td></tr></table></figure>
+<p>另外，这些属性只能用来设置Cookie。一旦设置完成，就没有办法读取这些属性的值。</p>
+<p>删除一个Cookie的简便方法，就是设置<code>expires</code>属性等于0，或者等于一个过去的日期。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">document</span>.cookie = <span class="string">'fontSize=;expires=Thu, 01-Jan-1970 00:00:01 GMT'</span>;</div></pre></td></tr></table></figure>
+<p>上面代码中，名为<code>fontSize</code>的Cookie的值为空，过期时间设为1970年1月1月零点，就等同于删除了这个Cookie。</p>
+<h2 id="Cookie的限制"><a href="#Cookie的限制" class="headerlink" title="Cookie的限制"></a>Cookie的限制</h2><p>浏览器对Cookie数量的限制，规定不一样。目前，Firefox是每个域名最多设置50个Cookie，而Safari和Chrome没有域名数量的限制。</p>
+<p>所有Cookie的累加长度限制为4KB。超过这个长度的Cookie，将被忽略，不会被设置。</p>
+<p>由于Cookie可能存在数量限制，有时为了规避限制，可以将cookie设置成下面的形式。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">name=a=b&amp;c=d&amp;e=f&amp;g=h</div></pre></td></tr></table></figure>
+<p>上面代码实际上是设置了一个Cookie，但是这个Cookie内部使用<code>&amp;</code>符号，设置了多部分的内容。因此，读取这个Cookie的时候，就要自行解析，得到多个键值对。这样就规避了cookie的数量限制。</p>
+<h2 id="同源政策"><a href="#同源政策" class="headerlink" title="同源政策"></a>同源政策</h2><p>浏览器的同源政策规定，两个网址只要域名相同和端口相同，就可以共享Cookie。</p>
+<p>注意，这里不要求协议相同。也就是说，<code>http://example.com</code>设置的Cookie，可以被<code>https://example.com</code>读取。</p>
+<h2 id="Http-Only-Cookie"><a href="#Http-Only-Cookie" class="headerlink" title="Http-Only Cookie"></a>Http-Only Cookie</h2><p>设置Cookie的时候，如果服务器加上了<code>HttpOnly</code>属性，则这个Cookie无法被JavaScript读取（即<code>document.cookie</code>不会返回这个Cookie的值），只用于向服务器发送。</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Set-Cookie</span>: key=value; HttpOnly</div></pre></td></tr></table></figure>
+<p>上面的这个Cookie将无法用JavaScript获取。进行AJAX操作时，<code>XMLHttpRequest</code>对象也无法包括这个Cookie。这主要是为了防止XSS攻击盗取Cookie。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h2&gt;&lt;p&gt;Cookie是服务器保存在浏览器的一小段文本信息，每个Cookie的大小一般不能超过4KB。浏览器每次向服务器发出请求，就会自动附上这段信息
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="JS" scheme="http://yoursite.com/tags/JS/"/>
+    
+      <category term="DOM" scheme="http://yoursite.com/tags/DOM/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络篇相关知识</title>
     <link href="http://yoursite.com/2016/09/13/%E7%BD%91%E7%BB%9C%E7%AF%87%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86/"/>
     <id>http://yoursite.com/2016/09/13/网络篇相关知识/</id>
     <published>2016-09-13T13:38:19.000Z</published>
-    <updated>2016-09-13T17:17:41.379Z</updated>
+    <updated>2016-10-09T18:13:52.662Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><font color="#FF7256"><br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬<br>                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe ░░░▒▒▒▓▓▓<br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬</font></p>
+<p><font></font></p>
+<blockquote>
 <p>下列均转载自作者刘望舒 ，非常感谢！</p>
 </blockquote>
 <p><a href="http://www.jianshu.com/p/1ae1170b9a9a" target="_blank" rel="external">Android网络编程（一）HTTP协议原理</a></p>
@@ -75,10 +700,7 @@
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;下列均转载自作者刘望舒 ，非常感谢！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.jianshu.com/p/1ae1170b9a9a&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Andro
+      &lt;p&gt;&lt;font color=&quot;#FF7256&quot;&gt;&lt;br&gt;                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬&lt;br&gt;                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe
     
     </summary>
     
@@ -108,9 +730,12 @@
     <link href="http://yoursite.com/2016/09/13/%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E5%8F%8A%E6%8A%93%E5%8C%85%E5%88%86%E6%9E%90/"/>
     <id>http://yoursite.com/2016/09/13/自动化测试及抓包分析/</id>
     <published>2016-09-13T13:00:08.000Z</published>
-    <updated>2016-09-17T04:18:00.170Z</updated>
+    <updated>2016-10-09T18:14:54.976Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><font color="#FF7256"><br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬<br>                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe ░░░▒▒▒▓▓▓<br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬</font></p>
+<font>
+
+<blockquote>
 <p><strong><font color="#FF7256">以下均为配合网络请求转载的文章</font></strong></p>
 </blockquote>
 <p><a href="http://www.cnblogs.com/TankXiao/p/3316355.html" target="_blank" rel="external">如何学习自动化测试</a></p>
@@ -128,14 +753,11 @@
 <p><a href="http://www.cnblogs.com/tina-smile/p/5467447.html" target="_blank" rel="external">wireshark使用心得</a></p>
 <hr>
 <p><strong><font color="#FF7256">android自动化测试：</font></strong></p>
-<p><a href="http://www.cnblogs.com/TankXiao/p/4815134.html" target="_blank" rel="external">Android Monkey 压力测试介绍</a></p>]]></content>
+<p><a href="http://www.cnblogs.com/TankXiao/p/4815134.html" target="_blank" rel="external">Android Monkey 压力测试介绍</a></p></font>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;#FF7256&quot;&gt;以下均为配合网络请求转载的文章&lt;/font&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;http://www.cnblogs.com/TankXiao/
+      &lt;p&gt;&lt;font color=&quot;#FF7256&quot;&gt;&lt;br&gt;                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬&lt;br&gt;                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe
     
     </summary>
     
@@ -161,9 +783,12 @@
     <link href="http://yoursite.com/2016/09/07/%E5%8D%81%E6%89%B9%E5%88%A4%E4%B9%A6/"/>
     <id>http://yoursite.com/2016/09/07/十批判书/</id>
     <published>2016-09-07T03:19:06.000Z</published>
-    <updated>2016-09-17T02:06:22.434Z</updated>
+    <updated>2016-10-09T18:15:06.045Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><font color="#FF7256"><br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬<br>                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe ░░░▒▒▒▓▓▓<br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬</font></p>
+<font>
+
+<blockquote>
 <p><strong><font color="#FF7256">郭沫若 著作</font></strong>        </p>
 </blockquote>
 <h4 id="郭沫若《十批判书》（1）"><a href="#郭沫若《十批判书》（1）" class="headerlink" title="郭沫若《十批判书》（1）"></a>郭沫若《十批判书》（1）</h4><h5 id="古代研究的自我批判"><a href="#古代研究的自我批判" class="headerlink" title="古代研究的自我批判"></a><strong><font color="#FF7256">古代研究的自我批判</font></strong></h5><p>关于秦以前的古代社会的研究，我前后费了将近十五年的工夫，现在是达到了能够作自我批判的时候。我首先要谴责自己。我在一九三〇年发表了《中国古代社会研究》那一本书，虽然博得了很多的读者，实在是太草率，太性急了。其中有好些未成熟的或甚至错误的判断，一直到现在还留下相当深刻的影响。有的朋友还沿用着我的错误，有的则沿用着我错误的征引而又引到另一错误的判断，因此关于古代的面貌引起了许多新的混乱。这个责任，现在由我自己来清算，我想是应该的，也是颇合时宜的。我在这儿想先检讨一下处理材料的问题。</p>
@@ -310,14 +935,11 @@
 <p>这样的一位“天不能死，地不能埋”的与仲尼并列的子弓，有人说，就是仲弓，本子路亦称季路之例，则仲弓亦可称为子弓。但这个例实在不好援用。因为仲尼不见称子尼，伯鱼不见称子鱼，而子思亦不见称季思，则子路仅亦字季路而已。子弓确有这么一个人，便是传《易》的馯臂子弓。《史记·仲尼弟子列传》云：商瞿，鲁人，字子木，少孔子二十九岁。孔子传《易》于瞿；瞿传楚人馯臂子弘；弘传江东人矫子庸疵；疵传燕人周子家竖。又《汉书?儒林传》云：自鲁商瞿子木受《易》孔子，以授鲁桥庇子庸；子庸授江东馯臂子弓；子弓授燕周醜子家。这两个传统是一套，《史记》的人名是字上名下的古式，《汉书》是名上字下的新式，足见《史记》的资料有双重的古意。第三代和第四代，两种传统互易了，我看当从《史记》，但《史记》的“馯臂子弘”应作“馯(姓)子弘(字)臂(名)”才能划一，那一定是后来的人照《汉书》的新式抄错了的。《易经》在秦时未遭火焚，传《易》者当然也不犯禁，故尔有它的详细传统，但谓“孔子传《易》于瞿”，那只是《易》家后学的附益而已。孔子不曾见过《易》）连商瞿也不见得见过。我认为《易》是子弓创作的，详见拙作《周易之制作时代》一文。在先秦儒家中，荀子为谈到《易》的唯一的人，在《非相篇》与《大略篇》各引“《易》曰”一句，《大略篇》又论到“《易》之咸见夫妇”，和《易象传》的见解相符。大率在荀子晚年“蒙佯狂之色”的时候，他才攒进了《易》里面去的。他在别的地方并不曾把《易》来和《诗》、《书》、《礼》、《乐》、《春秋》并列（参看《劝学篇》），似乎在他的初年还不曾把《易》当成经。但等待他一攒进《易》去之后，便受了很深的影响，《易传》强半是出于他的门徒之手，因而《易传》中的许多“子曰”，应该就是荀子在说。正因此，他是那样地把子弓神圣视了。商瞿对于子弓，有些思想上的影响，是不成问题的。《孟子》书中曾言“子莫执中”（《尽心上》）。这位子莫虽然有人说是魏公子牟或者端孙子莫，但在我看来可能就是商瞿子木。又《尸子?广泽篇》有云“皇子贵衷”，贵衷与执中同义，则皇子当即商子，商皇古音同在阳部。中之义为《易》所摄取，作《易》者的基本认识，是以为宇宙万物均在变化之中，变化是宇宙过程，而变化之所由生则因有阴阳刚柔相反二性之对立，由于无数对立物之相推相荡而变化因以无穷际。这是对于自然界的看法。但说到人事界来，便要参加一层斟酌的意义。人乘此变化，当处于中正之地位，使对立物无过无不及，使在人事界的变化，可以不至于走到极端(“亢”)，因而变化便可以静定下来，地位便可以长久安定(“永贞”)下去。这样便有百利而无一害。这大约也就是子莫所执的“中”，皇子所贵的“衷”了。这分明是一种直线式的折半主义，处己贵不刚不柔，称物是裒多益寡，那样便每每使变化静定，即使有变化也不能发展而为进化。所谓“《易》之道逆数也”，传《易》者也早就明白它是反乎自然的。虽然乾卦的《象传》在说“天行健，君子以自强不息”，但那只是做《象传》者的意思，而不是经的本意。要那样不息下去，经会警告你：“亢龙有悔”呵。孟子是反对这种“执中”形式的，他说“执中无权犹执一也”，执一便是僵定，“举一而废百”。孟子既反对“无权”，则他必然主张“有权”。权就是天秤的砝码，无权者是不用砝码，把两端的轻重去取一下，使其画一。有权者是要用砝码，增加轻的一端，使与重的一端平衡。这样所得到的平衡便是更高的一个阶段。在孟子确是有过这样的主张：他要“与民同乐”，要“使有菽粟如水火”，这大约就是两派虽同样主张“执中”而又互相非难的原故吧。作《易经》的人很明显的是已经知道了五行说的。坤卦六五“黄裳元吉”，离卦六二“黄离元吉”，逐卦六二“用黄牛之革”，解卦九二“得黄矢”，鼎卦六五“鼎黄耳金铉”。二与五居下卦与上卦之中，不仅爻多吉辞，且以黄色表位，这分明是作者已经知道五方五色的配合的证据。照年代说来，子弓和子思同时，他能知道五行说的梗概，是毫无问题的。这两派，在儒家思想上要算是一种展开，就在中国的思想史上也要算是最初呈出了从分析着想的倾向。他们同认宇宙是变化过程，而在说明这种过程上，子思提出了五行相生，子弓提出了阴阳对立。这两种学说后为邹衍所合并，而又加以发展，便成为了所谓阴阳家。接着，更加上迷信的成分，于是便成为二干多年的封建社会的妖魔窟。这是子思和子弓所初料不及的。关于荀子思想的批判，当另为专文以论之，兹不赘述。</p>
 <pre><code>记于一九四四年九月十一日 
 </code></pre><hr>
-<h4 id="郭沫若《十批判书》（3）"><a href="#郭沫若《十批判书》（3）" class="headerlink" title="郭沫若《十批判书》（3）"></a>郭沫若《十批判书》（3）</h4>]]></content>
+<h4 id="郭沫若《十批判书》（3）"><a href="#郭沫若《十批判书》（3）" class="headerlink" title="郭沫若《十批判书》（3）"></a>郭沫若《十批判书》（3）</h4></font>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;#FF7256&quot;&gt;郭沫若 著作&lt;/font&gt;&lt;/strong&gt;        &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id=&quot;郭沫若《十批判书》（1）&quot;&gt;&lt;a href=&quot;#郭沫若《十批判书》（1）&quot;
+      &lt;p&gt;&lt;font color=&quot;#FF7256&quot;&gt;&lt;br&gt;                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬&lt;br&gt;                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe
     
     </summary>
     
@@ -335,9 +957,12 @@
     <link href="http://yoursite.com/2016/09/03/HTTP-HTTPS-SOCKET/"/>
     <id>http://yoursite.com/2016/09/03/HTTP-HTTPS-SOCKET/</id>
     <published>2016-09-03T08:49:51.000Z</published>
-    <updated>2016-09-16T16:23:10.703Z</updated>
+    <updated>2016-10-09T18:16:20.126Z</updated>
     
-    <content type="html"><![CDATA[<blockquote>
+    <content type="html"><![CDATA[<p><font color="#FF7256"><br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬<br>                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe ░░░▒▒▒▓▓▓<br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬</font></p>
+<font>
+
+<blockquote>
 <p><strong><font color="#FF7256">写在本文之前先声明一点：本文是作者通过收集的文章以及自己的看法统一精心整理而成的，主要的参考链接已给出，若想更加全面的理解HTTP协议，建议阅读《图解HTTP》一书，本文花费作者大量时间和精力，未经作者允许禁止转载！</font></strong></p>
 </blockquote>
 <p><a href="http://www.androidchina.net/4710.html" target="_blank" rel="external">http://www.androidchina.net/4710.html</a><br><a href="http://www.androidchina.net/3934.html" target="_blank" rel="external">http://www.androidchina.net/3934.html</a><br><a href="http://www.androidchina.net/5469.html" target="_blank" rel="external">http://www.androidchina.net/5469.html</a><br><a href="http://www.jianshu.com/p/de262cfbb4ef" target="_blank" rel="external">http://www.jianshu.com/p/de262cfbb4ef</a><br><a href="http://www.jianshu.com/p/e544b7a76dac" target="_blank" rel="external">http://www.jianshu.com/p/e544b7a76dac</a><br><a href="http://www.jianshu.com/p/8565912949bb#" target="_blank" rel="external">http://www.jianshu.com/p/8565912949bb#</a><br><a href="http://my.oschina.net/yuanxulong/blog/355055" target="_blank" rel="external">http://my.oschina.net/yuanxulong/blog/355055</a><br><a href="http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html" target="_blank" rel="external">http://www.cnblogs.com/li0803/archive/2008/11/03/1324746.html</a></p>
@@ -462,7 +1087,7 @@
 <p>　　按照使用场景来说，一般用户注册的内容属于私密的，这应该使用POST方式；而针对某一内容的查询，为了快速的响应，可以使用GET方式。</p>
 <p>在请求中，HTTP 报文由方法、URI、HTTP 版本、HTTP 首部字段等部分构成。
 　　</p>
-<h6 id="请求报文格式："><a href="#请求报文格式：" class="headerlink" title="请求报文格式："></a><strong><font color="#FF7256">请求报文格式：</font></strong></h6><p><img src="http://storage1.imgchr.com/images/9e8d2d586b9f4129.png" alt="enter image description here"></p>
+<h6 id="请求报文格式："><a href="#请求报文格式：" class="headerlink" title="请求报文格式："></a><strong><font color="#FF7256">请求报文格式：</font></strong></h6><p><img src="http://storage1.imgchr.com/images/1691b2.png" alt="enter image description here"></p>
 <p>　<br><strong><font color="#FF7256">请求行：</font></strong></p>
 <p>请求行（Request Line）分为三个部分：请求方法、请求地址和协议及版本，以CRLF(\r\n)结束。</p>
 <p>HTTP/1.1 定义的请求方法有8种：GET、POST、PUT、DELETE、PATCH、HEAD、OPTIONS、TRACE,最常的两种GET和POST，如果是RESTful接口的话一般会用到GET、POST、DELETE、PUT。</p>
@@ -501,7 +1126,7 @@
 <p>　　7. Host, 目标主机</p>
 <p>　　8. User-Agent, 客户端浏览器的相关信息</p>
 <p>　　9. Set-Cookie, 指定想要在Cookie中保存的内容</p>
-<h6 id="响应报文格式："><a href="#响应报文格式：" class="headerlink" title="响应报文格式："></a><strong><font color="#FF7256">响应报文格式：</font></strong></h6><p><img src="http://storage1.imgchr.com/images/0a06851c68245583.png" alt="enter image description here"></p>
+<h6 id="响应报文格式："><a href="#响应报文格式：" class="headerlink" title="响应报文格式："></a><strong><font color="#FF7256">响应报文格式：</font></strong></h6><p><img src="http://storage1.imgchr.com/images/19c2d6.png" alt="enter image description here"></p>
 <p>在响应中，HTTP 报文由 HTTP 版本、状态码（数字和原因短语）、HTTP 首部字段 3 部分构成。</p>
 <h6 id="Header"><a href="#Header" class="headerlink" title="Header"></a><strong><font color="#FF7256">Header</font></strong></h6><p> <strong><font color="#FF7256">HTTP 首部字段结构：</font></strong></p>
 <p>HTTP 首部字段是由首部字段名和字段值构成的，中间用冒号“：” 分隔。<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">首部字段名: 字段值</div></pre></td></tr></table></figure></p>
@@ -1371,7 +1996,7 @@
 <h6 id="分块传输编码："><a href="#分块传输编码：" class="headerlink" title="分块传输编码："></a><strong><font color="#FF7256">分块传输编码：</font></strong></h6><p>使用Content-Length字段的前提条件是，服务器发送回应之前，必须知道回应的数据长度。</p>
 <p>对于一些很耗时的动态操作来说，这意味着，服务器要等到所有操作完成，才能发送数据，显然这样的效率不高。更好的处理方法是，产生一块数据，就发送一块，采用”流模式”（stream）取代”缓存模式”（buffer）。</p>
 <p>因此，1.1版规定可以不使用Content-Length字段，而使用“分块传输编码”（chunked transfer encoding）。只要请求或回应的头信息有Transfer-Encoding字段，就表明回应将由数量未定的数据块组成。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div></pre></td></tr></table></figure></p>
-<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="undefined">25</span></div><div class="line">This is the data in the first chunk</div><div class="line"></div><div class="line">1C</div><div class="line">and this is the second one</div><div class="line"></div><div class="line">3</div><div class="line">con</div><div class="line"></div><div class="line">8</div><div class="line">sequence</div><div class="line"></div><div class="line">0</div></pre></td></tr></table></figure></p>
+<p>每个非空的数据块之前，会有一个16进制的数值，表示这个块的长度。最后是一个大小为0的块，就表示本次回应的数据发送完了。下面是一个例子：<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 <span class="number">200</span> OK</div><div class="line"><span class="attribute">Content-Type</span>: text/plain</div><div class="line"><span class="attribute">Transfer-Encoding</span>: chunked</div><div class="line"></div><div class="line"><span class="javascript"><span class="number">25</span></span></div><div class="line">This is the data <span class="keyword">in</span> the first chunk</div><div class="line"></div><div class="line"><span class="number">1</span>C</div><div class="line">and <span class="keyword">this</span> is the second one</div><div class="line"></div><div class="line"><span class="number">3</span></div><div class="line">con</div><div class="line"></div><div class="line"><span class="number">8</span></div><div class="line">sequence</div><div class="line"></div><div class="line"><span class="number">0</span></div></pre></td></tr></table></figure></p>
 <h6 id="其他功能："><a href="#其他功能：" class="headerlink" title="其他功能："></a><strong><font color="#FF7256">其他功能：</font></strong></h6><p>HTTP/1.1版还新增了许多动词方法：PUT、PATCH、HEAD、 OPTIONS、DELETE。</p>
 <p>另外，客户端请求的头信息新增了Host字段，用来指定服务器的域名。<br><figure class="highlight http"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">Host</span>: www.example.com</div></pre></td></tr></table></figure></p>
 <p>有了Host字段，就可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下了基础。</p>
@@ -1844,12 +2469,11 @@
 <p><strong><font color="#FF7256">总结：</font></strong></p>
 <p>使用UDP方式android端和服务器端接收可以看出，其实android端和服务器端的发送和接收大庭相径，只要端口号正确了，相互通信就没有问题，TCP使用的是流的方式发送，UDP是以包的形式发送。</p>
 <p>最后附上七层模型图：</p>
-<p><img src="http://storage1.imgchr.com/images/OSI.gif" alt="@OSI七层模型"></p>]]></content>
+<p><img src="http://storage1.imgchr.com/images/OSI.gif" alt="@OSI七层模型"></p></font>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;&lt;font color=&quot;#FF7256&quot;&gt;写在本文之前先声明一点：本文是作者通过收集的文章以及自己的看法统一精心整理而成的，主要的参考链接已给出，若想更加全面的理解HTTP协议，建议阅读《图解HTTP》一书，本文花费作者大量时间和
+      &lt;p&gt;&lt;font color=&quot;#FF7256&quot;&gt;&lt;br&gt;                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬&lt;br&gt;                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe
     
     </summary>
     
@@ -1871,11 +2495,109 @@
   </entry>
   
   <entry>
+    <title>原型以及原型链</title>
+    <link href="http://yoursite.com/2016/08/21/%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://yoursite.com/2016/08/21/原型对象/</id>
+    <published>2016-08-21T03:29:38.000Z</published>
+    <updated>2016-12-04T03:10:29.208Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文总结自阮一峰老师的<a href="http://javascript.ruanyifeng.com/oop/prototype.html#" target="_blank" rel="external">《JavaScript标准参考教程》</a></p>
+</blockquote>
+<p>####一、原型</p>
+<p><div>JavaScript的每个对象都继承另一个对象，后者称为“原型”（prototype）对象。只有null除外，它没有自己的原型对象。<div></div></div></p>
+<p><font color="#FF7256"><strong>JavaScript继承机制的基本<font>设计：</font></strong></font></p>
+<blockquote>
+<p><font color="#FF7256" size="2">原型对象上的所有属性和方法，都能被派生对象共享。</font></p>
+</blockquote>
+<p>通过构造函数生成实例对象时，会自动为实例对象分配原型对象。每一个构造函数都有一个prototype属性，这个属性就是实例对象的原型对象。</p>
+<p>当实例对象本身没有某个属性或方法的时候，它会到构造函数的prototype属性指向的对象，去寻找该属性或方法。这就是原型对象的特殊之处。</p>
+<blockquote>
+<p><font color="#FF7256" size="2">原型对象的作用，就是定义所有实例对象共享的属性和方法。这也是它被称为原型对象的含义，而实例对象可以视作从原型对象衍生出来的子对象。</font></p>
+</blockquote>
+<p>由于JavaScript的所有对象都有构造函数，而所有构造函数都有prototype属性（其实是所有函数都有prototype属性），所以所有对象都有自己的原型对象。</p>
+<h4 id="二、原型链"><a href="#二、原型链" class="headerlink" title="二、原型链"></a>二、原型链</h4><p>对象的属性和方法，有可能是定义在自身，也有可能是定义在它的原型对象。由于原型本身也是对象，又有自己的原型，所以形成了一条原型链（prototype chain）。比如，a对象是b对象的原型，b对象是c对象的原型，以此类推。</p>
+<p>如果一层层地上溯，所有对象的原型最终都可以上溯到Object.prototype，即Object构造函数的prototype属性指向的那个对象。那么，Object.prototype对象有没有它的原型呢？回答可以是有的，就是没有任何属性和方法的null对象，而null对象没有自己的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.getPrototypeOf(<span class="built_in">Object</span>.prototype)</div><div class="line"><span class="comment">// null</span></div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（1）instanceof运算符</strong></font></p>
+<blockquote>
+<p><font color="red" size="2">instanceof运算符用来比较一个对象是否为某个构造函数的实例.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> Vehicle();</div><div class="line">v <span class="keyword">instanceof</span> Vehicle <span class="comment">// true</span></div></pre></td></tr></table></figure></font></p>
+</blockquote>
+<p>instanceof运算符的左边是实例对象，右边是构造函数。它的运算实质是检查右边构造函数的原型对象，是否在左边对象的原型链上。因此，下面两种写法是等价的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">v <span class="keyword">instanceof</span> Vehicle</div><div class="line"><span class="comment">// 等同于</span></div><div class="line">Vehicle.prototype.isPrototypeOf(v)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.create(<span class="literal">null</span>) <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<p>上面代码中，Object.create(null)返回的新对象的原型是null，即不存在原型，因此instanceof就认为该对象不是Object的实例。</p>
+<p>除了上面这种继承null的特殊情况，JavaScript之中，只要是对象，就有对应的构造函数。因此，instanceof运算符的一个用处，是判断值的类型。</p>
+<blockquote>
+<p><font color="#FF7256" size="2">注意，instanceof运算符只能用于对象，不适用原始类型的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</div><div class="line">s <span class="keyword">instanceof</span> <span class="built_in">String</span> <span class="comment">// false</span></div></pre></td></tr></table></figure></font></p>
+</blockquote>
+<p>上面代码中，字符串不是String对象的实例（因为字符串不是对象），所以返回false。</p>
+<p>此外，undefined和null不是对象，所以instanceOf运算符总是返回false。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div><div class="line"><span class="literal">null</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>利用instanceof运算符，还可以巧妙地解决，调用构造函数时，忘了加new命令的问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fubar</span> (<span class="params">foo, bar</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (<span class="keyword">this</span> <span class="keyword">instanceof</span> Fubar) &#123;</div><div class="line">	    <span class="keyword">this</span>._foo = foo;</div><div class="line">	    <span class="keyword">this</span>._bar = bar;</div><div class="line">	&#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Fubar(foo, bar);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面代码使用instanceof运算符，在函数体内部判断this关键字是否为构造函数Fubar的实例。如果不是，就表明忘了加new命令。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（2）Object.getPrototypeOf（）</strong></font></p>
+<p>Object.getPrototypeOf方法返回一个对象的原型。这是获取原型对象的标准方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 空对象的原型是Object.prototype</span></div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(&#123;&#125;) === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// 函数的原型是Function.prototype</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === <span class="built_in">Function</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// f 为 F 的实例对象，则 f 的原型是 F.prototype</span></div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === F.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（3）Object.setPrototypeOf（）</strong></font></p>
+<p>Object.setPrototypeOf方法可以为现有对象设置原型，返回一个新对象。<br>Object.setPrototypeOf方法接受两个参数，第一个是现有对象，第二个是原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;x: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> b = <span class="built_in">Object</span>.setPrototypeOf(&#123;&#125;, a);</div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="comment">// var b = &#123;__proto__: a&#125;;</span></div><div class="line">b.x <span class="comment">// 1</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，b对象是Object.setPrototypeOf方法返回的一个新对象。该对象本身为空、原型为a对象，所以b对象可以拿到a对象的所有属性和方法。b对象本身并没有x属性，但是JavaScript引擎找到它的原型对象a，然后读取a的x属性。</p>
+<p>new命令通过构造函数新建实例对象，实质就是将实例对象的原型，指向构造函数的prototype属性，然后在实例对象上执行构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.foo = <span class="string">'bar'</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"></div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="keyword">var</span> f = <span class="built_in">Object</span>.setPrototypeOf(&#123;&#125;, F.prototype);</div><div class="line">F.call(f);</div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（4）Object.create（）</strong></font></p>
+<p>Object.create方法用于从原型对象生成新的实例对象，可以替代new命令。</p>
+<p>它接受一个对象作为参数，返回一个新对象，后者完全继承前者的属性，即原有对象成为新对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = &#123;</div><div class="line">	print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> B = <span class="built_in">Object</span>.create(A);</div><div class="line"></div><div class="line">B.print() <span class="comment">// hello</span></div><div class="line">B.print === A.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，Object.create方法在A的基础上生成了B。此时，A就成了B的原型，B就继承了A的所有属性和方法。这段代码等同于下面的代码。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">A.prototype = &#123;</div><div class="line">	print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> B = <span class="keyword">new</span> A();</div><div class="line"></div><div class="line">B.print === A.prototype.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>实际上，Object.create方法可以用下面的代码代替。如果老式浏览器不支持Object.create方法，可以就用这段代码自己部署。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">Object</span>.create !== <span class="string">'function'</span>) &#123;</div><div class="line">	<span class="built_in">Object</span>.create = <span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123;</div><div class="line">	    <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">	    F.prototype = o;</div><div class="line">	    <span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面代码表示，Object.create方法实质是新建一个构造函数F，然后让F的prototype属性指向作为原型的对象o，最后返回一个F的实例，从而实现让实例继承o的属性。</p>
+<p>下面三种方式生成的新对象是等价的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = <span class="built_in">Object</span>.create(&#123;&#125;);</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype);</div><div class="line"><span class="keyword">var</span> o3 = <span class="keyword">new</span> <span class="built_in">Object</span>();</div></pre></td></tr></table></figure></p>
+<p>如果想要生成一个不继承任何属性（比如没有toString和valueOf方法）的对象，可以将Object.create的参数设为null。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</div><div class="line"></div><div class="line">o.valueOf()</div><div class="line"><span class="comment">// TypeError: Object [object Object] has no method 'valueOf'</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表示，如果对象o的原型是null，它就不具备一些定义在Object.prototype对象上面的属性，比如valueOf方法。</p>
+<p>使用Object.create方法的时候，必须提供对象原型，否则会报错。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.create()</div><div class="line"><span class="comment">// TypeError: Object prototype may only be an Object or null</span></div></pre></td></tr></table></figure></p>
+<p>object.create方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象之上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123; p: <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(o1);</div><div class="line"></div><div class="line">o1.p = <span class="number">2</span>;</div><div class="line">o2.p</div><div class="line"><span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表示，修改对象原型会影响到新生成的对象。</p>
+<p>除了对象的原型，Object.create方法还可以接受第二个参数。该参数是一个属性描述对象，它所描述的对象属性，会添加到新对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(&#123;&#125;, &#123;</div><div class="line">p1: &#123; value: <span class="number">123</span>, enumerable: <span class="literal">true</span> &#125;,</div><div class="line">p2: &#123; value: <span class="string">'abc'</span>, enumerable: <span class="literal">true</span> &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(&#123;&#125;);</div><div class="line">o.p1 = <span class="number">123</span>;</div><div class="line">o.p2 = <span class="string">'abc'</span>;</div></pre></td></tr></table></figure></p>
+<p>Object.create方法生成的对象，继承了它的原型对象的构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A();</div><div class="line"><span class="keyword">var</span> b = <span class="built_in">Object</span>.create(a);</div><div class="line"></div><div class="line">b.constructor === A <span class="comment">// true</span></div><div class="line">b <span class="keyword">instanceof</span> A <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，b对象的原型是a对象，因此继承了a对象的构造函数A。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（5）Object.prototype.isPrototypeOf（）</strong></font></p>
+<p>对象实例的isPrototypeOf方法，用来判断一个对象是否是另一个对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(o1);</div><div class="line"><span class="keyword">var</span> o3 = <span class="built_in">Object</span>.create(o2);</div><div class="line"></div><div class="line">o2.isPrototypeOf(o3) <span class="comment">// true</span></div><div class="line">o1.isPrototypeOf(o3) <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表明，只要某个对象处在原型链上，isProtypeOf都返回true。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(&#123;&#125;) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf([]) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(<span class="regexp">/xyz/</span>) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(<span class="built_in">Object</span>.create(<span class="literal">null</span>)) <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，由于Object.prototype处于原型链的最顶端，所以对各种实例都返回true，只有继承null的对象除外。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（6）Object.prototype.<strong>proto</strong>（）</strong></font></p>
+<p><strong>proto</strong>属性（前后各两个下划线）可以改写某个对象的原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> p = &#123;&#125;;</div><div class="line"></div><div class="line">obj.__proto__ = p;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj) === p <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码通过<strong>proto</strong>属性，将p对象设为obj对象的原型。</p>
+<p>根据语言标准，<strong>proto</strong>属性只有浏览器才需要部署，其他环境可以没有这个属性，而且前后的两根下划线，表示它本质是一个内部属性，不应该对使用者暴露。因此，应该尽量少用这个属性，而是用Object.getPrototypeof()（读取）和Object.setPrototypeOf()（设置），进行原型对象的读写操作。</p>
+<p>原型链可以用<strong>proto</strong>很直观地表示。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = &#123;</div><div class="line">  name: <span class="string">'张三'</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> B = &#123;</div><div class="line">  name: <span class="string">'李四'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> proto = &#123;</div><div class="line">  print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">A.__proto__ = proto;</div><div class="line">B.__proto__ = proto;</div><div class="line"></div><div class="line">A.print() <span class="comment">// 张三</span></div><div class="line">B.print() <span class="comment">// 李四</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，A对象和B对象的原型都是proto对象，它们都共享proto对象的print方法。也就是说，A和B的print方法，都是在调用proto对象的print方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">A.print === B.print <span class="comment">// true</span></div><div class="line">A.print === proto.print <span class="comment">// true</span></div><div class="line">B.print === proto.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>可以使用Object.getPrototypeOf方法，检查浏览器是否支持<strong>proto</strong>属性，老式浏览器不支持这个属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.getPrototypeOf(&#123; __proto__: <span class="literal">null</span> &#125;) === <span class="literal">null</span></div></pre></td></tr></table></figure></p>
+<p>上面代码将一个对象的<strong>proto</strong>属性设为null，然后使用Object.getPrototypeOf方法获取这个对象的原型，判断是否等于null。如果当前环境支持<strong>proto</strong>属性，两者的比较结果应该是true。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（7）获取原型对象方法的比较</strong><br>如前所述，<strong>proto</strong>属性指向当前对象的原型对象，即构造函数的prototype属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"></div><div class="line">obj.__proto__ === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line">obj.__proto__ === obj.constructor.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></font></p>
+<p>上面代码首先新建了一个对象obj，它的<strong>proto</strong>属性，指向构造函数（Object或obj.constructor）的prototype属性。所以，两者比较以后，返回true。</p>
+<p>因此，获取实例对象obj的原型对象，有三种方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">obj.__proto__</div><div class="line">obj.constructor.prototype</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj)</div></pre></td></tr></table></figure></p>
+<p>上面三种方法之中，前两种都不是很可靠。最新的ES6标准规定，<strong>proto</strong>属性只有浏览器才需要部署，其他环境可以不部署。而obj.constructor.prototype在手动改变原型对象时，可能会失效。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> P = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> P();</div><div class="line"></div><div class="line"><span class="keyword">var</span> C = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">C.prototype = p;</div><div class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> C();</div><div class="line"></div><div class="line">c.constructor.prototype === p <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，C构造函数的原型对象被改成了p，结果c.constructor.prototype就失真了。所以，在改变原型对象时，一般要同时设置constructor属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">C.prototype = p;</div><div class="line">C.prototype.constructor = C;</div><div class="line"></div><div class="line">c.constructor.prototype === p <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>所以，推荐使用第三种Object.getPrototypeOf方法，获取原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(o) === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文总结自阮一峰老师的&lt;a href=&quot;http://javascript.ruanyifeng.com/oop/prototype.html#&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;《JavaScript标准参考教程》&lt;
+    
+    </summary>
+    
+      <category term="JS" scheme="http://yoursite.com/categories/JS/"/>
+    
+    
+      <category term="原型" scheme="http://yoursite.com/tags/%E5%8E%9F%E5%9E%8B/"/>
+    
+      <category term="原型链" scheme="http://yoursite.com/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/"/>
+    
+      <category term="构造函数" scheme="http://yoursite.com/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网络请求</title>
     <link href="http://yoursite.com/2016/08/21/%E7%BD%91%E7%BB%9C%E8%AF%B7%E6%B1%82/"/>
     <id>http://yoursite.com/2016/08/21/网络请求/</id>
     <published>2016-08-21T03:29:38.000Z</published>
-    <updated>2016-09-04T12:55:20.647Z</updated>
+    <updated>2016-10-09T18:34:40.250Z</updated>
     
     <content type="html"><![CDATA[<h3 id="TCP-IP协议分层"><a href="#TCP-IP协议分层" class="headerlink" title="TCP/IP协议分层"></a><strong><font color="#FF7256">TCP/IP协议分层</font></strong></h3><blockquote>
 <p>发送协议的主机从上自下将数据按照协议封装，而接收数据的主机则按照协议从得到的数据包解开，最后拿到需要的数据。这种结构和栈很相似，所以把TCP/IP协议族也称为TCP/IP协议栈。</p>
@@ -2383,7 +3105,7 @@
     <link href="http://yoursite.com/2016/08/13/%E5%AF%BC%E8%AF%AD/"/>
     <id>http://yoursite.com/2016/08/13/导语/</id>
     <published>2016-08-13T03:21:19.000Z</published>
-    <updated>2016-09-07T13:58:04.234Z</updated>
+    <updated>2016-10-07T09:28:59.078Z</updated>
     
     <content type="html"><![CDATA[<h2 id="导语"><a href="#导语" class="headerlink" title="导语"></a><strong>导语</strong></h2><blockquote>
 <p>本文意在练习hexo，并非恶意盗用原作者文章来满足自己的虚荣心，本文出自：<a href="http://www.androidchina.net/5238.html" target="_blank" rel="external">Android 线程的正确使用姿势</a></p>
@@ -2394,7 +3116,7 @@
 </blockquote>
 <h3 id="一、-Process-Priority（进程优先级）："><a href="#一、-Process-Priority（进程优先级）：" class="headerlink" title="一、 Process Priority（进程优先级）："></a>一、 Process Priority（进程优先级）：</h3><h4 id="1-Foreground-Process："><a href="#1-Foreground-Process：" class="headerlink" title="1. Foreground Process："></a>1. Foreground Process：</h4><font size="4"> Foreground一般意味着用户双眼可见，可见却不一定是active。在Android的世界里，一个Activity处于前台之时，如果能采集用户的input事件，就可以判定为active，如果中途弹出一个Dialog，Dialog变成新的active实体，直接面对用户的操作。被部分遮挡的activity尽管依然可见，但状态却变为inactive。不能正确的区分visible和active是很多初级程序员会犯的错误。</font>
 
-<h4 id="2-Background-Process："><a href="#2-Background-Process：" class="headerlink" title="2. Background Process："></a>2. Background Process：</h4><p>后台进程同样有更细的划分。所谓的Background可以理解为不可见（invisible）。对于不可见的任务，Android也有重要性的区分。重要的后台任务定义为Service，如果一个进程包含Service（称为Service Process），那么在“重要性”上就会被系统区别对待，其优先级自然会高于不包含Service的进程（称为Background Process），最后还剩一类空进程（Empty Process）。Empty Process初看有些费解，一个Process如果什么都不做，还有什么存在的必要。其实Empty Process并不Empty，还存在不少的内存占用。<br><img src="http://i2.piimg.com/567571/e238715c28695f96.png" alt="enter image description here"></p>
+<h4 id="2-Background-Process："><a href="#2-Background-Process：" class="headerlink" title="2. Background Process："></a>2. Background Process：</h4><p>后台进程同样有更细的划分。所谓的Background可以理解为不可见（invisible）。对于不可见的任务，Android也有重要性的区分。重要的后台任务定义为Service，如果一个进程包含Service（称为Service Process），那么在“重要性”上就会被系统区别对待，其优先级自然会高于不包含Service的进程（称为Background Process），最后还剩一类空进程（Empty Process）。Empty Process初看有些费解，一个Process如果什么都不做，还有什么存在的必要。其实Empty Process并不Empty，还存在不少的内存占用。<br><img src="http://p1.bpimg.com/567571/49064a7a92d5cd7a.png" alt="enter image description here"></p>
 <h3 id="二、-Thread-Scheduling（线程调度）："><a href="#二、-Thread-Scheduling（线程调度）：" class="headerlink" title="二、 Thread Scheduling（线程调度）："></a>二、 Thread Scheduling（线程调度）：</h3><p>Linux系统的调度器在分配time slice的时候，采用的CFS（completely fair scheduler）策略。这种策略不但会参考单个线程的优先级，还会追踪每个线程已经获取到的time slice数量，如果高优先级的线程已经执行了很长时间，但低优先级的线程一直在等待，后续系统会保证低优先级的线程也能获取更多的CPU时间。显然使用这种调度策略的话，优先级高的线程并不一定能在争取time slice上有绝对的优势，所以Android系统在线程调度上使用了cgroups的概念，cgroups能更好的凸显某些线程的重要性，使得优先级更高的线程明确的获取到更多的time slice。</p>
 <p>Android将线程分为多个group，其中两类group尤其重要。一类是default group，UI线程属于这一类。另一类是background group，工作线程应该归属到这一类。background group当中所有的线程加起来总共也只能分配到5～10%的time slice，剩下的全部分配给default group，这样设计显然能保证UI线程绘制UI的流畅性。</p>
 <p>有不少人吐槽Android系统之所以不如iOS流畅，是因为UI线程的优先级和普通工作线程一致导致的。这其实是个误会，Android的设计者实际上提供了background group的概念来降低工作线程的CPU资源消耗，只不过与iOS不同的是，Android开发者需要显式的将工作线程归于background group。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line"> <span class="meta">@Override</span></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">      Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);</div><div class="line"> &#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure></p>
@@ -2451,9 +3173,13 @@
     <link href="http://yoursite.com/2016/08/09/Hexo/"/>
     <id>http://yoursite.com/2016/08/09/Hexo/</id>
     <published>2016-08-09T11:18:46.000Z</published>
-    <updated>2016-09-03T15:57:21.974Z</updated>
+    <updated>2016-10-09T18:14:42.540Z</updated>
     
-    <content type="html"><![CDATA[<h4 id="一、-Hexo简介"><a href="#一、-Hexo简介" class="headerlink" title="一、 Hexo简介"></a><strong>一、 Hexo简介</strong></h4><hr>
+    <content type="html"><![CDATA[<h4 id="一、-Hexo简介"><a href="#一、-Hexo简介" class="headerlink" title="一、 Hexo简介"></a><strong>一、 Hexo简介</strong></h4><p><font color="#FF7256"><br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬<br>                    ▓▓▓▒▒▒░░░ Like,Comment,Subscribe ░░░▒▒▒▓▓▓<br>                          ▬▬▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬▬▬▬▬</font></p>
+<font>
+
+
+<hr>
 <h4 id="二、-博客搭建"><a href="#二、-博客搭建" class="headerlink" title="二、 博客搭建"></a><strong>二、 博客搭建</strong></h4><h5 id="1-创建GitHub仓库"><a href="#1-创建GitHub仓库" class="headerlink" title="1. 创建GitHub仓库"></a>1. 创建GitHub仓库</h5><h5 id="2-Git-安装"><a href="#2-Git-安装" class="headerlink" title="2. Git 安装"></a>2. Git 安装</h5><h6 id="1-Windows-中"><a href="#1-Windows-中" class="headerlink" title="(1). Windows 中"></a>(1). Windows 中</h6><h6 id="2-Mac-OS-中"><a href="#2-Mac-OS-中" class="headerlink" title="(2). Mac OS 中"></a>(2). Mac OS 中</h6><h5 id="3-Node-js-安装"><a href="#3-Node-js-安装" class="headerlink" title="3. Node.js 安装"></a>3. Node.js 安装</h5><h6 id="1-Windows-中-1"><a href="#1-Windows-中-1" class="headerlink" title="(1). Windows 中"></a>(1). Windows 中</h6><h6 id="2-Mac-OS-中-1"><a href="#2-Mac-OS-中-1" class="headerlink" title="(2). Mac OS 中"></a>(2). Mac OS 中</h6><h5 id="4-Hexo-安装"><a href="#4-Hexo-安装" class="headerlink" title="4. Hexo 安装"></a>4. Hexo 安装</h5><h5 id="5-创建本地博客"><a href="#5-创建本地博客" class="headerlink" title="5. 创建本地博客"></a>5. 创建本地博客</h5><h5 id="6-Next-安装"><a href="#6-Next-安装" class="headerlink" title="6. Next 安装"></a>6. Next 安装</h5><h6 id="1-Next-配置"><a href="#1-Next-配置" class="headerlink" title="(1). Next 配置"></a>(1). Next 配置</h6><pre><code>Next 配置详解
 </code></pre><p>Next 配置就是上面所说的”主题配置文件“，位于xxx.github.io/   themes/next 目录下，文件名为 _config.yml</p>
 <h6 id="2-创建分类页面"><a href="#2-创建分类页面" class="headerlink" title="(2). 创建分类页面"></a>(2). 创建分类页面</h6><h6 id="3-创建标签云页面"><a href="#3-创建标签云页面" class="headerlink" title="(3). 创建标签云页面"></a>(3). 创建标签云页面</h6><hr>
@@ -2463,12 +3189,11 @@
 <h5 id="2-在本地运行测试"><a href="#2-在本地运行测试" class="headerlink" title="2. 在本地运行测试"></a>2. 在本地运行测试</h5><pre><code>打开命令行定位到 xxx.github.io 目录，输入命令：
 hexo s # 这是简写 == hexo server # 启动服务预览
 或$ hexo s
-</code></pre><h5 id="3-在浏览器查看效果"><a href="#3-在浏览器查看效果" class="headerlink" title="3. 在浏览器查看效果"></a>3. 在浏览器查看效果</h5><h5 id="4-安装自动部署发布工具"><a href="#4-安装自动部署发布工具" class="headerlink" title="4. 安装自动部署发布工具"></a>4. 安装自动部署发布工具</h5><h5 id="5-发布到-GitHubPages"><a href="#5-发布到-GitHubPages" class="headerlink" title="5. 发布到 GitHubPages"></a>5. 发布到 GitHubPages</h5>]]></content>
+</code></pre><h5 id="3-在浏览器查看效果"><a href="#3-在浏览器查看效果" class="headerlink" title="3. 在浏览器查看效果"></a>3. 在浏览器查看效果</h5><h5 id="4-安装自动部署发布工具"><a href="#4-安装自动部署发布工具" class="headerlink" title="4. 安装自动部署发布工具"></a>4. 安装自动部署发布工具</h5><h5 id="5-发布到-GitHubPages"><a href="#5-发布到-GitHubPages" class="headerlink" title="5. 发布到 GitHubPages"></a>5. 发布到 GitHubPages</h5></font>]]></content>
     
     <summary type="html">
     
-      &lt;h4 id=&quot;一、-Hexo简介&quot;&gt;&lt;a href=&quot;#一、-Hexo简介&quot; class=&quot;headerlink&quot; title=&quot;一、 Hexo简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;一、 Hexo简介&lt;/strong&gt;&lt;/h4&gt;&lt;hr&gt;
-&lt;h4 id=&quot;二、-博客搭建&quot;&gt;&lt;a hre
+      &lt;h4 id=&quot;一、-Hexo简介&quot;&gt;&lt;a href=&quot;#一、-Hexo简介&quot; class=&quot;headerlink&quot; title=&quot;一、 Hexo简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;一、 Hexo简介&lt;/strong&gt;&lt;/h4&gt;&lt;p&gt;&lt;font color=&quot;#FF7256&quot;&gt;&lt;br
     
     </summary>
     

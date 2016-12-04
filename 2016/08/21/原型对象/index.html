@@ -1,0 +1,783 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="原型,原型链,构造函数,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="VimPeanut" type="application/atom+xml">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1">
+
+
+
+
+
+
+<meta name="description" content="本文总结自阮一峰老师的《JavaScript标准参考教程》
+
+####一、原型
+JavaScript的每个对象都继承另一个对象，后者称为“原型”（prototype）对象。只有null除外，它没有自己的原型对象。
+JavaScript继承机制的基本设计：
+
+原型对象上的所有属性和方法，都能被派生对象共享。
+
+通过构造函数生成实例对象时，会自动为实例对象分配原型对象。每一个构造函数都有一个prot">
+<meta property="og:type" content="article">
+<meta property="og:title" content="原型以及原型链">
+<meta property="og:url" content="http://yoursite.com/2016/08/21/原型对象/index.html">
+<meta property="og:site_name" content="VimPeanut">
+<meta property="og:description" content="本文总结自阮一峰老师的《JavaScript标准参考教程》
+
+####一、原型
+JavaScript的每个对象都继承另一个对象，后者称为“原型”（prototype）对象。只有null除外，它没有自己的原型对象。
+JavaScript继承机制的基本设计：
+
+原型对象上的所有属性和方法，都能被派生对象共享。
+
+通过构造函数生成实例对象时，会自动为实例对象分配原型对象。每一个构造函数都有一个prot">
+<meta property="og:updated_time" content="2016-12-04T03:10:29.208Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="原型以及原型链">
+<meta name="twitter:description" content="本文总结自阮一峰老师的《JavaScript标准参考教程》
+
+####一、原型
+JavaScript的每个对象都继承另一个对象，后者称为“原型”（prototype）对象。只有null除外，它没有自己的原型对象。
+JavaScript继承机制的基本设计：
+
+原型对象上的所有属性和方法，都能被派生对象共享。
+
+通过构造函数生成实例对象时，会自动为实例对象分配原型对象。每一个构造函数都有一个prot">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'CryPeanut'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/08/21/原型对象/">
+
+  <title> 原型以及原型链 | VimPeanut </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">VimPeanut</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-categories"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                原型以及原型链
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-21T11:29:38+08:00" content="2016-08-21">
+              2016-08-21
+            </time>
+          </span>
+
+          
+            <span class="post-category">
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/JS/" itemprop="url" rel="index">
+                    <span itemprop="name">JS</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/08/21/原型对象/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/21/原型对象/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本文总结自阮一峰老师的<a href="http://javascript.ruanyifeng.com/oop/prototype.html#" target="_blank" rel="external">《JavaScript标准参考教程》</a></p>
+</blockquote>
+<p>####一、原型</p>
+<p><div>JavaScript的每个对象都继承另一个对象，后者称为“原型”（prototype）对象。只有null除外，它没有自己的原型对象。<div></div></div></p>
+<p><font color="#FF7256"><strong>JavaScript继承机制的基本<font>设计：</font></strong></font></p>
+<blockquote>
+<p><font color="#FF7256" size="2">原型对象上的所有属性和方法，都能被派生对象共享。</font></p>
+</blockquote>
+<p>通过构造函数生成实例对象时，会自动为实例对象分配原型对象。每一个构造函数都有一个prototype属性，这个属性就是实例对象的原型对象。</p>
+<p>当实例对象本身没有某个属性或方法的时候，它会到构造函数的prototype属性指向的对象，去寻找该属性或方法。这就是原型对象的特殊之处。</p>
+<blockquote>
+<p><font color="#FF7256" size="2">原型对象的作用，就是定义所有实例对象共享的属性和方法。这也是它被称为原型对象的含义，而实例对象可以视作从原型对象衍生出来的子对象。</font></p>
+</blockquote>
+<p>由于JavaScript的所有对象都有构造函数，而所有构造函数都有prototype属性（其实是所有函数都有prototype属性），所以所有对象都有自己的原型对象。</p>
+<h4 id="二、原型链"><a href="#二、原型链" class="headerlink" title="二、原型链"></a>二、原型链</h4><p>对象的属性和方法，有可能是定义在自身，也有可能是定义在它的原型对象。由于原型本身也是对象，又有自己的原型，所以形成了一条原型链（prototype chain）。比如，a对象是b对象的原型，b对象是c对象的原型，以此类推。</p>
+<p>如果一层层地上溯，所有对象的原型最终都可以上溯到Object.prototype，即Object构造函数的prototype属性指向的那个对象。那么，Object.prototype对象有没有它的原型呢？回答可以是有的，就是没有任何属性和方法的null对象，而null对象没有自己的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.getPrototypeOf(<span class="built_in">Object</span>.prototype)</div><div class="line"><span class="comment">// null</span></div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（1）instanceof运算符</strong></font></p>
+<blockquote>
+<p><font color="red" size="2">instanceof运算符用来比较一个对象是否为某个构造函数的实例.<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> v = <span class="keyword">new</span> Vehicle();</div><div class="line">v <span class="keyword">instanceof</span> Vehicle <span class="comment">// true</span></div></pre></td></tr></table></figure></font></p>
+</blockquote>
+<p>instanceof运算符的左边是实例对象，右边是构造函数。它的运算实质是检查右边构造函数的原型对象，是否在左边对象的原型链上。因此，下面两种写法是等价的。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">v <span class="keyword">instanceof</span> Vehicle</div><div class="line"><span class="comment">// 等同于</span></div><div class="line">Vehicle.prototype.isPrototypeOf(v)</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.create(<span class="literal">null</span>) <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<p>上面代码中，Object.create(null)返回的新对象的原型是null，即不存在原型，因此instanceof就认为该对象不是Object的实例。</p>
+<p>除了上面这种继承null的特殊情况，JavaScript之中，只要是对象，就有对应的构造函数。因此，instanceof运算符的一个用处，是判断值的类型。</p>
+<blockquote>
+<p><font color="#FF7256" size="2">注意，instanceof运算符只能用于对象，不适用原始类型的值。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> s = <span class="string">'hello'</span>;</div><div class="line">s <span class="keyword">instanceof</span> <span class="built_in">String</span> <span class="comment">// false</span></div></pre></td></tr></table></figure></font></p>
+</blockquote>
+<p>上面代码中，字符串不是String对象的实例（因为字符串不是对象），所以返回false。</p>
+<p>此外，undefined和null不是对象，所以instanceOf运算符总是返回false。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">undefined</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div><div class="line"><span class="literal">null</span> <span class="keyword">instanceof</span> <span class="built_in">Object</span> <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>利用instanceof运算符，还可以巧妙地解决，调用构造函数时，忘了加new命令的问题。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Fubar</span> (<span class="params">foo, bar</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (<span class="keyword">this</span> <span class="keyword">instanceof</span> Fubar) &#123;</div><div class="line">	    <span class="keyword">this</span>._foo = foo;</div><div class="line">	    <span class="keyword">this</span>._bar = bar;</div><div class="line">	&#125;<span class="keyword">else</span> &#123;</div><div class="line">    <span class="keyword">return</span> <span class="keyword">new</span> Fubar(foo, bar);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面代码使用instanceof运算符，在函数体内部判断this关键字是否为构造函数Fubar的实例。如果不是，就表明忘了加new命令。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（2）Object.getPrototypeOf（）</strong></font></p>
+<p>Object.getPrototypeOf方法返回一个对象的原型。这是获取原型对象的标准方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 空对象的原型是Object.prototype</span></div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(&#123;&#125;) === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// 函数的原型是Function.prototype</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === <span class="built_in">Function</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line"></div><div class="line"><span class="comment">// f 为 F 的实例对象，则 f 的原型是 F.prototype</span></div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(f) === F.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（3）Object.setPrototypeOf（）</strong></font></p>
+<p>Object.setPrototypeOf方法可以为现有对象设置原型，返回一个新对象。<br>Object.setPrototypeOf方法接受两个参数，第一个是现有对象，第二个是原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = &#123;x: <span class="number">1</span>&#125;;</div><div class="line"><span class="keyword">var</span> b = <span class="built_in">Object</span>.setPrototypeOf(&#123;&#125;, a);</div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="comment">// var b = &#123;__proto__: a&#125;;</span></div><div class="line">b.x <span class="comment">// 1</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，b对象是Object.setPrototypeOf方法返回的一个新对象。该对象本身为空、原型为a对象，所以b对象可以拿到a对象的所有属性和方法。b对象本身并没有x属性，但是JavaScript引擎找到它的原型对象a，然后读取a的x属性。</p>
+<p>new命令通过构造函数新建实例对象，实质就是将实例对象的原型，指向构造函数的prototype属性，然后在实例对象上执行构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> F = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.foo = <span class="string">'bar'</span>;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> f = <span class="keyword">new</span> F();</div><div class="line"></div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="keyword">var</span> f = <span class="built_in">Object</span>.setPrototypeOf(&#123;&#125;, F.prototype);</div><div class="line">F.call(f);</div></pre></td></tr></table></figure></p>
+<p>#####<font color="#FF7256" size="2"><strong>（4）Object.create（）</strong></font></p>
+<p>Object.create方法用于从原型对象生成新的实例对象，可以替代new命令。</p>
+<p>它接受一个对象作为参数，返回一个新对象，后者完全继承前者的属性，即原有对象成为新对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = &#123;</div><div class="line">	print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> B = <span class="built_in">Object</span>.create(A);</div><div class="line"></div><div class="line">B.print() <span class="comment">// hello</span></div><div class="line">B.print === A.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，Object.create方法在A的基础上生成了B。此时，A就成了B的原型，B就继承了A的所有属性和方法。这段代码等同于下面的代码。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">A.prototype = &#123;</div><div class="line">	print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">'hello'</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> B = <span class="keyword">new</span> A();</div><div class="line"></div><div class="line">B.print === A.prototype.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>实际上，Object.create方法可以用下面的代码代替。如果老式浏览器不支持Object.create方法，可以就用这段代码自己部署。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> <span class="built_in">Object</span>.create !== <span class="string">'function'</span>) &#123;</div><div class="line">	<span class="built_in">Object</span>.create = <span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123;</div><div class="line">	    <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line">	    F.prototype = o;</div><div class="line">	    <span class="keyword">return</span> <span class="keyword">new</span> F();</div><div class="line">	&#125;;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>上面代码表示，Object.create方法实质是新建一个构造函数F，然后让F的prototype属性指向作为原型的对象o，最后返回一个F的实例，从而实现让实例继承o的属性。</p>
+<p>下面三种方式生成的新对象是等价的。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = <span class="built_in">Object</span>.create(&#123;&#125;);</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype);</div><div class="line"><span class="keyword">var</span> o3 = <span class="keyword">new</span> <span class="built_in">Object</span>();</div></pre></td></tr></table></figure></p>
+<p>如果想要生成一个不继承任何属性（比如没有toString和valueOf方法）的对象，可以将Object.create的参数设为null。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</div><div class="line"></div><div class="line">o.valueOf()</div><div class="line"><span class="comment">// TypeError: Object [object Object] has no method 'valueOf'</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表示，如果对象o的原型是null，它就不具备一些定义在Object.prototype对象上面的属性，比如valueOf方法。</p>
+<p>使用Object.create方法的时候，必须提供对象原型，否则会报错。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.create()</div><div class="line"><span class="comment">// TypeError: Object prototype may only be an Object or null</span></div></pre></td></tr></table></figure></p>
+<p>object.create方法生成的新对象，动态继承了原型。在原型上添加或修改任何方法，会立刻反映在新对象之上。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123; p: <span class="number">1</span> &#125;;</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(o1);</div><div class="line"></div><div class="line">o1.p = <span class="number">2</span>;</div><div class="line">o2.p</div><div class="line"><span class="comment">// 2</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表示，修改对象原型会影响到新生成的对象。</p>
+<p>除了对象的原型，Object.create方法还可以接受第二个参数。该参数是一个属性描述对象，它所描述的对象属性，会添加到新对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(&#123;&#125;, &#123;</div><div class="line">p1: &#123; value: <span class="number">123</span>, enumerable: <span class="literal">true</span> &#125;,</div><div class="line">p2: &#123; value: <span class="string">'abc'</span>, enumerable: <span class="literal">true</span> &#125;</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 等同于</span></div><div class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(&#123;&#125;);</div><div class="line">o.p1 = <span class="number">123</span>;</div><div class="line">o.p2 = <span class="string">'abc'</span>;</div></pre></td></tr></table></figure></p>
+<p>Object.create方法生成的对象，继承了它的原型对象的构造函数。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">A</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> A();</div><div class="line"><span class="keyword">var</span> b = <span class="built_in">Object</span>.create(a);</div><div class="line"></div><div class="line">b.constructor === A <span class="comment">// true</span></div><div class="line">b <span class="keyword">instanceof</span> A <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，b对象的原型是a对象，因此继承了a对象的构造函数A。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（5）Object.prototype.isPrototypeOf（）</strong></font></p>
+<p>对象实例的isPrototypeOf方法，用来判断一个对象是否是另一个对象的原型。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o1 = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> o2 = <span class="built_in">Object</span>.create(o1);</div><div class="line"><span class="keyword">var</span> o3 = <span class="built_in">Object</span>.create(o2);</div><div class="line"></div><div class="line">o2.isPrototypeOf(o3) <span class="comment">// true</span></div><div class="line">o1.isPrototypeOf(o3) <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码表明，只要某个对象处在原型链上，isProtypeOf都返回true。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(&#123;&#125;) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf([]) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(<span class="regexp">/xyz/</span>) <span class="comment">// true</span></div><div class="line"><span class="built_in">Object</span>.prototype.isPrototypeOf(<span class="built_in">Object</span>.create(<span class="literal">null</span>)) <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，由于Object.prototype处于原型链的最顶端，所以对各种实例都返回true，只有继承null的对象除外。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（6）Object.prototype.<strong>proto</strong>（）</strong></font></p>
+<p><strong>proto</strong>属性（前后各两个下划线）可以改写某个对象的原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = &#123;&#125;;</div><div class="line"><span class="keyword">var</span> p = &#123;&#125;;</div><div class="line"></div><div class="line">obj.__proto__ = p;</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj) === p <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>上面代码通过<strong>proto</strong>属性，将p对象设为obj对象的原型。</p>
+<p>根据语言标准，<strong>proto</strong>属性只有浏览器才需要部署，其他环境可以没有这个属性，而且前后的两根下划线，表示它本质是一个内部属性，不应该对使用者暴露。因此，应该尽量少用这个属性，而是用Object.getPrototypeof()（读取）和Object.setPrototypeOf()（设置），进行原型对象的读写操作。</p>
+<p>原型链可以用<strong>proto</strong>很直观地表示。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> A = &#123;</div><div class="line">  name: <span class="string">'张三'</span></div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> B = &#123;</div><div class="line">  name: <span class="string">'李四'</span></div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> proto = &#123;</div><div class="line">  print: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line"></div><div class="line">A.__proto__ = proto;</div><div class="line">B.__proto__ = proto;</div><div class="line"></div><div class="line">A.print() <span class="comment">// 张三</span></div><div class="line">B.print() <span class="comment">// 李四</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，A对象和B对象的原型都是proto对象，它们都共享proto对象的print方法。也就是说，A和B的print方法，都是在调用proto对象的print方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">A.print === B.print <span class="comment">// true</span></div><div class="line">A.print === proto.print <span class="comment">// true</span></div><div class="line">B.print === proto.print <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>可以使用Object.getPrototypeOf方法，检查浏览器是否支持<strong>proto</strong>属性，老式浏览器不支持这个属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">Object</span>.getPrototypeOf(&#123; __proto__: <span class="literal">null</span> &#125;) === <span class="literal">null</span></div></pre></td></tr></table></figure></p>
+<p>上面代码将一个对象的<strong>proto</strong>属性设为null，然后使用Object.getPrototypeOf方法获取这个对象的原型，判断是否等于null。如果当前环境支持<strong>proto</strong>属性，两者的比较结果应该是true。</p>
+<p>#####<font color="#FF7256" size="2"><strong>（7）获取原型对象方法的比较</strong><br>如前所述，<strong>proto</strong>属性指向当前对象的原型对象，即构造函数的prototype属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"></div><div class="line">obj.__proto__ === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div><div class="line">obj.__proto__ === obj.constructor.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></font></p>
+<p>上面代码首先新建了一个对象obj，它的<strong>proto</strong>属性，指向构造函数（Object或obj.constructor）的prototype属性。所以，两者比较以后，返回true。</p>
+<p>因此，获取实例对象obj的原型对象，有三种方法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">obj.__proto__</div><div class="line">obj.constructor.prototype</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(obj)</div></pre></td></tr></table></figure></p>
+<p>上面三种方法之中，前两种都不是很可靠。最新的ES6标准规定，<strong>proto</strong>属性只有浏览器才需要部署，其他环境可以不部署。而obj.constructor.prototype在手动改变原型对象时，可能会失效。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> P = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> P();</div><div class="line"></div><div class="line"><span class="keyword">var</span> C = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</div><div class="line">C.prototype = p;</div><div class="line"><span class="keyword">var</span> c = <span class="keyword">new</span> C();</div><div class="line"></div><div class="line">c.constructor.prototype === p <span class="comment">// false</span></div></pre></td></tr></table></figure></p>
+<p>上面代码中，C构造函数的原型对象被改成了p，结果c.constructor.prototype就失真了。所以，在改变原型对象时，一般要同时设置constructor属性。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">C.prototype = p;</div><div class="line">C.prototype.constructor = C;</div><div class="line"></div><div class="line">c.constructor.prototype === p <span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+<p>所以，推荐使用第三种Object.getPrototypeOf方法，获取原型对象。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line"><span class="built_in">Object</span>.getPrototypeOf(o) === <span class="built_in">Object</span>.prototype</div><div class="line"><span class="comment">// true</span></div></pre></td></tr></table></figure></p>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/原型/" rel="tag">#原型</a>
+          
+            <a href="/tags/原型链/" rel="tag">#原型链</a>
+          
+            <a href="/tags/构造函数/" rel="tag">#构造函数</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/21/网络请求/" rel="next" title="网络请求">
+                <i class="fa fa-chevron-left"></i> 网络请求
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/03/HTTP-HTTPS-SOCKET/" rel="prev" title="HTTP/HTTPS/SOCKET">
+                HTTP/HTTPS/SOCKET <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          <!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="Orz-God"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"orz-god"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/uploads/images/avatar.jpg" alt="Peanut">
+          <p class="site-author-name" itemprop="name">Peanut</p>
+          <p class="site-description motion-element" itemprop="description">Never GiveUp...</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/Orz-God" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.jianshu.com/users/a2c65a148e3c/latest_articles" title="jianshu" target="_blank">jianshu</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#二、原型链"><span class="nav-text">二、原型链</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Peanut</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"CryPeanut"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+
+</body>
+</html>

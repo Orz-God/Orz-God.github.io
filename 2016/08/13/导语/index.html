@@ -74,7 +74,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="鱼人孑" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="VimPeanut" type="application/atom+xml">
 
 
 
@@ -97,7 +97,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android多线程">
 <meta property="og:url" content="http://yoursite.com/2016/08/13/导语/index.html">
-<meta property="og:site_name" content="鱼人孑">
+<meta property="og:site_name" content="VimPeanut">
 <meta property="og:description" content="导语
 本文意在练习hexo，并非恶意盗用原作者文章来满足自己的虚荣心，本文出自：Android 线程的正确使用姿势
 
@@ -106,8 +106,8 @@
 
 
 一、 Process Priority（进程优先级）：1. Foreground Process： Foreground一般意味着用户双眼可见，可见却不一定是active。在Android的世界里，">
-<meta property="og:image" content="http://i2.piimg.com/567571/e238715c28695f96.png">
-<meta property="og:updated_time" content="2016-09-07T13:58:04.234Z">
+<meta property="og:image" content="http://p1.bpimg.com/567571/49064a7a92d5cd7a.png">
+<meta property="og:updated_time" content="2016-10-07T09:28:59.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android多线程">
 <meta name="twitter:description" content="导语
@@ -118,7 +118,7 @@
 
 
 一、 Process Priority（进程优先级）：1. Foreground Process： Foreground一般意味着用户双眼可见，可见却不一定是active。在Android的世界里，">
-<meta name="twitter:image" content="http://i2.piimg.com/567571/e238715c28695f96.png">
+<meta name="twitter:image" content="http://p1.bpimg.com/567571/49064a7a92d5cd7a.png">
 
 
 
@@ -131,7 +131,7 @@
     motion: true,
     duoshuo: {
       userId: 0,
-      author: 'Orz-God'
+      author: 'CryPeanut'
     }
   };
 </script>
@@ -141,7 +141,7 @@
 
   <link rel="canonical" href="http://yoursite.com/2016/08/13/导语/">
 
-  <title> Android多线程 | 鱼人孑 </title>
+  <title> Android多线程 | VimPeanut </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +172,7 @@
   <div class="custom-logo-site-title">
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">鱼人孑</span>
+      <span class="site-title">VimPeanut</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -346,7 +346,7 @@
 </blockquote>
 <h3 id="一、-Process-Priority（进程优先级）："><a href="#一、-Process-Priority（进程优先级）：" class="headerlink" title="一、 Process Priority（进程优先级）："></a>一、 Process Priority（进程优先级）：</h3><h4 id="1-Foreground-Process："><a href="#1-Foreground-Process：" class="headerlink" title="1. Foreground Process："></a>1. Foreground Process：</h4><font size="4"> Foreground一般意味着用户双眼可见，可见却不一定是active。在Android的世界里，一个Activity处于前台之时，如果能采集用户的input事件，就可以判定为active，如果中途弹出一个Dialog，Dialog变成新的active实体，直接面对用户的操作。被部分遮挡的activity尽管依然可见，但状态却变为inactive。不能正确的区分visible和active是很多初级程序员会犯的错误。</font>
 
-<h4 id="2-Background-Process："><a href="#2-Background-Process：" class="headerlink" title="2. Background Process："></a>2. Background Process：</h4><p>后台进程同样有更细的划分。所谓的Background可以理解为不可见（invisible）。对于不可见的任务，Android也有重要性的区分。重要的后台任务定义为Service，如果一个进程包含Service（称为Service Process），那么在“重要性”上就会被系统区别对待，其优先级自然会高于不包含Service的进程（称为Background Process），最后还剩一类空进程（Empty Process）。Empty Process初看有些费解，一个Process如果什么都不做，还有什么存在的必要。其实Empty Process并不Empty，还存在不少的内存占用。<br><img src="http://i2.piimg.com/567571/e238715c28695f96.png" alt="enter image description here"></p>
+<h4 id="2-Background-Process："><a href="#2-Background-Process：" class="headerlink" title="2. Background Process："></a>2. Background Process：</h4><p>后台进程同样有更细的划分。所谓的Background可以理解为不可见（invisible）。对于不可见的任务，Android也有重要性的区分。重要的后台任务定义为Service，如果一个进程包含Service（称为Service Process），那么在“重要性”上就会被系统区别对待，其优先级自然会高于不包含Service的进程（称为Background Process），最后还剩一类空进程（Empty Process）。Empty Process初看有些费解，一个Process如果什么都不做，还有什么存在的必要。其实Empty Process并不Empty，还存在不少的内存占用。<br><img src="http://p1.bpimg.com/567571/49064a7a92d5cd7a.png" alt="enter image description here"></p>
 <h3 id="二、-Thread-Scheduling（线程调度）："><a href="#二、-Thread-Scheduling（线程调度）：" class="headerlink" title="二、 Thread Scheduling（线程调度）："></a>二、 Thread Scheduling（线程调度）：</h3><p>Linux系统的调度器在分配time slice的时候，采用的CFS（completely fair scheduler）策略。这种策略不但会参考单个线程的优先级，还会追踪每个线程已经获取到的time slice数量，如果高优先级的线程已经执行了很长时间，但低优先级的线程一直在等待，后续系统会保证低优先级的线程也能获取更多的CPU时间。显然使用这种调度策略的话，优先级高的线程并不一定能在争取time slice上有绝对的优势，所以Android系统在线程调度上使用了cgroups的概念，cgroups能更好的凸显某些线程的重要性，使得优先级更高的线程明确的获取到更多的time slice。</p>
 <p>Android将线程分为多个group，其中两类group尤其重要。一类是default group，UI线程属于这一类。另一类是background group，工作线程应该归属到这一类。background group当中所有的线程加起来总共也只能分配到5～10%的time slice，剩下的全部分配给default group，这样设计显然能保证UI线程绘制UI的流畅性。</p>
 <p>有不少人吐槽Android系统之所以不如iOS流畅，是因为UI线程的优先级和普通工作线程一致导致的。这其实是个误会，Android的设计者实际上提供了background group的概念来降低工作线程的CPU资源消耗，只不过与iOS不同的是，Android开发者需要显式的将工作线程归于background group。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</div><div class="line"> <span class="meta">@Override</span></div><div class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</div><div class="line">      Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);</div><div class="line"> &#125;</div><div class="line">&#125;).start();</div></pre></td></tr></table></figure></p>
@@ -492,14 +492,14 @@ var duoshuoQuery = {short_name:"orz-god"};
 
       <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image" src="/uploads/images/avatar.jpg" alt="Orz-God">
-          <p class="site-author-name" itemprop="name">Orz-God</p>
-          <p class="site-description motion-element" itemprop="description">如果我愿意...</p>
+          <img class="site-author-image" itemprop="image" src="/uploads/images/avatar.jpg" alt="Peanut">
+          <p class="site-author-name" itemprop="name">Peanut</p>
+          <p class="site-description motion-element" itemprop="description">Never GiveUp...</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -507,7 +507,7 @@ var duoshuoQuery = {short_name:"orz-god"};
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -516,7 +516,7 @@ var duoshuoQuery = {short_name:"orz-god"};
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -600,7 +600,7 @@ var duoshuoQuery = {short_name:"orz-god"};
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">Orz-God</span>
+  <span class="author" itemprop="copyrightHolder">Peanut</span>
 </div>
 
 <div class="powered-by">
@@ -696,7 +696,7 @@ var duoshuoQuery = {short_name:"orz-god"};
   
 
   <script type="text/javascript">
-    var duoshuoQuery = {short_name:"Orz-God"};
+    var duoshuoQuery = {short_name:"CryPeanut"};
     (function() {
       var ds = document.createElement('script');
       ds.type = 'text/javascript';ds.async = true;
